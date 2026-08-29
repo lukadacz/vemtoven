@@ -13,7 +13,7 @@
     "dayPrice": 490,
     "minDays": 3,
     "deposit": "5 000 Kč",
-    "imgSrc": "/images/produkt-stresni-stan.png"
+    "imgSrc": "/images/stresni-stan-light.png"
   },
   {
     "id": "k2",
@@ -29,7 +29,7 @@
     "dayPrice": 290,
     "minDays": 3,
     "deposit": "2 000 Kč",
-    "imgSrc": "/images/produkt-box-tazne.png",
+    "imgSrc": "/images/box-na-tazne-light.png",
     "description": "Prostorný zavazadlový box na tažné zařízení výrazně zvětší úložný prostor vašeho auta, aniž byste museli cokoliv vozit na střeše. Nakládá se pohodlně v úrovni kufru, nezvyšuje spotřebu jako střešní box a je ideální na rodinnou dovolenou i stěhování výbavy na kemp.",
     "stats": [
       {"label": "Objem", "value": "340 l"},
@@ -94,7 +94,7 @@
     "dayPrice": 190,
     "minDays": 3,
     "deposit": "2 000 Kč",
-    "imgSrc": "/images/produkt-stresni-box.png",
+    "imgSrc": "/images/stresni-box-light.png",
     "description": "Aerodynamický střešní box Thule Pacific 700 s oboustranným otevíráním. Pojme lyže, kempingovou výbavu i objemná zavazadla a díky odolné konstrukci zvládne i dlouhou cestu k moři nebo do hor.",
     "stats": [
       {"label": "Objem", "value": "420 l"},
