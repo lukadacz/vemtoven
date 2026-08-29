@@ -42,6 +42,7 @@
   input::placeholder, textarea::placeholder { color:#b6b8a6; }
   @media (max-width: 1024px) {
     header > div { padding-left:24px !important; padding-right:24px !important; }
+    [style*="padding: 40px 64px 110px"] { padding-left:24px !important; padding-right:24px !important; }
     [style*="grid-template-columns: minmax"] { grid-template-columns:minmax(0,1fr) !important; }
     [style*="grid-template-columns: repeat(4"] { grid-template-columns:repeat(2,minmax(0,1fr)) !important; }
   }
@@ -57,8 +58,13 @@
   @media (max-width: 640px) {
     header img { height:36px !important; }
     header > div, footer > div { padding-left:20px !important; padding-right:20px !important; }
+    [style*="padding: 40px 64px 110px"] { padding-left:20px !important; padding-right:20px !important; }
     [style*="grid-template-columns: repeat(4"] { grid-template-columns:repeat(2,minmax(0,1fr)) !important; }
     h1 { font-size:32px !important; }
+    .product-photo { height:auto !important; aspect-ratio:16/10 !important; }
+    .related-row { display:flex !important; flex-wrap:nowrap !important; overflow-x:auto !important; -webkit-overflow-scrolling:touch; scrollbar-width:none; padding-bottom:2px; }
+    .related-row::-webkit-scrollbar { display:none; }
+    .related-row > a { flex:0 0 200px !important; width:200px !important; }
   }
 </style>
 
@@ -96,7 +102,7 @@
   <div style="display:grid;grid-template-columns:minmax(0,1fr) minmax(300px,460px);gap:40px;align-items:start;">
 
     <div style="min-width:0;">
-      <div style="position:relative;border-radius:20px;overflow:hidden;height:420px;margin-bottom:28px;">
+      <div class="product-photo" style="position:relative;border-radius:20px;overflow:hidden;height:420px;margin-bottom:28px;">
         <sc-if value="{{ p.hasPhoto }}" hint-placeholder-val="{{ false }}">
           <div style="width:100%;height:100%;background-image:{{ p.imgCss }};background-size:cover;background-position:center;"></div>
         </sc-if>
@@ -256,7 +262,7 @@
   </sc-if>
 
   <h2 style="font-family:'Fraunces',serif;font-weight:600;font-size:28px;margin:96px 0 24px;">Mohlo by se vám hodit</h2>
-  <div style="display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px;">
+  <div class="related-row" style="display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px;">
     <sc-for list="{{ related }}" as="r" hint-placeholder-count="4">
       <a href="{{ r.href }}" style="background:#fff;border-radius:18px;overflow:hidden;text-decoration:none;color:inherit;display:flex;flex-direction:column;box-shadow:0 8px 22px rgba(76,92,55,0.07);">
         <div style="height:150px;flex-shrink:0;">

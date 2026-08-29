@@ -45,6 +45,7 @@
     header > div { padding-left:24px !important; padding-right:24px !important; }
     header nav { font-size:13px !important; }
     section, .om-wrap { padding-left:32px !important; padding-right:32px !important; }
+    [style*="padding: 40px 32px 110px"] { padding-left:24px !important; padding-right:24px !important; }
     [style*="grid-template-columns: repeat(4"], [style*="grid-template-columns: repeat(5"] { grid-template-columns:repeat(2,minmax(0,1fr)) !important; }
     [style*="grid-template-columns: repeat(3, 1fr)"], [style*="grid-template-columns: repeat(3, minmax"] { grid-template-columns:repeat(2,minmax(0,1fr)) !important; }
     [style*="grid-column: 4"] { grid-column:auto !important; grid-row:auto !important; }
@@ -71,6 +72,11 @@
     [style*="border-radius: 26px"], [style*="border-radius: 22px"] { padding:28px !important; }
     [style*="left: -24px"], [style*="left: -28px"] { left:0 !important; max-width:100% !important; }
     img[style*="max-height"] { max-width:100% !important; }
+    [style*="padding: 40px 32px 110px"] { padding-left:20px !important; padding-right:20px !important; }
+    .product-photo-row { height:auto !important; }
+    .product-photo-thumbs { display:none !important; }
+    .product-photo-main { aspect-ratio:16/10 !important; }
+    .product-photo-main img { height:100% !important; }
   }
 
 </style>
@@ -109,12 +115,12 @@
 
     <!-- LEFT COLUMN -->
     <div style="min-width:0;">
-      <div style="display:flex;gap:12px;height:420px;margin-bottom:28px;">
-        <div style="position:relative;border-radius:20px;overflow:hidden;flex:1;min-width:0;">
+      <div class="product-photo-row" style="display:flex;gap:12px;height:420px;margin-bottom:28px;">
+        <div class="product-photo-main" style="position:relative;border-radius:20px;overflow:hidden;flex:1;min-width:0;">
           <img src="/images/produkt-stresni-stan.png" alt="Střešní stan až pro 4 osoby" style="width:100%;height:100%;object-fit:cover;display:block;border-radius:inherit;" />
           <span style="position:absolute;top:16px;left:16px;background:#4c5c37;color:#fff;border-radius:100px;padding:7px 16px;font-size:13px;font-weight:600;z-index:2;">Autostan</span>
         </div>
-        <div style="display:flex;flex-direction:column;gap:12px;width:120px;flex-shrink:0;">
+        <div class="product-photo-thumbs" style="display:flex;flex-direction:column;gap:12px;width:120px;flex-shrink:0;">
           <img src="/images/placeholder-foto.png" alt="Fotografie bude doplněna" style="width:100%;flex:1;object-fit:cover;display:block;border-radius:inherit;" />
           <img src="/images/placeholder-foto.png" alt="Fotografie bude doplněna" style="width:100%;flex:1;object-fit:cover;display:block;border-radius:inherit;" />
           <img src="/images/placeholder-foto.png" alt="Fotografie bude doplněna" style="width:100%;flex:1;object-fit:cover;display:block;border-radius:inherit;" />
