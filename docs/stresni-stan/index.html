@@ -150,14 +150,16 @@
     <!-- LEFT COLUMN -->
     <div style="min-width:0;">
       <div class="product-photo-row" style="display:flex;gap:12px;height:420px;margin-bottom:28px;">
-        <div class="product-photo-main" style="position:relative;border-radius:20px;overflow:hidden;flex:1;min-width:0;">
-          <img src="/images/produkt-stresni-stan.png" alt="Střešní stan až pro 4 osoby" style="width:100%;height:100%;object-fit:cover;display:block;border-radius:inherit;" />
+        <div class="product-photo-main" style="position:relative;border-radius:20px;overflow:hidden;flex:1;min-width:0;" onTouchStart="{{ onPhotoTouchStart }}" onTouchEnd="{{ onPhotoTouchEnd }}">
+          <div role="img" aria-label="{{ mainPhotoAlt }}" style="width:100%;height:100%;background-image:{{ mainPhotoCss }};background-size:cover;background-position:center;border-radius:inherit;"></div>
           <span style="position:absolute;top:16px;left:16px;background:#4c5c37;color:#fff;border-radius:100px;padding:7px 16px;font-size:13px;font-weight:600;z-index:2;">Autostan</span>
+          <button onClick="{{ prevPhoto }}" aria-label="Předchozí fotka" style="position:absolute;top:50%;left:12px;transform:translateY(-50%);width:38px;height:38px;border-radius:50%;background:rgba(255,255,255,0.85);border:none;display:flex;align-items:center;justify-content:center;cursor:pointer;z-index:2;box-shadow:0 2px 8px rgba(0,0,0,0.15);"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2f3323" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg></button>
+          <button onClick="{{ nextPhoto }}" aria-label="Další fotka" style="position:absolute;top:50%;right:12px;transform:translateY(-50%);width:38px;height:38px;border-radius:50%;background:rgba(255,255,255,0.85);border:none;display:flex;align-items:center;justify-content:center;cursor:pointer;z-index:2;box-shadow:0 2px 8px rgba(0,0,0,0.15);"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2f3323" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg></button>
         </div>
         <div class="product-photo-thumbs" style="display:flex;flex-direction:column;gap:12px;width:120px;flex-shrink:0;">
-          <img src="/images/stresni-stan-01.png" alt="Střešní stan Søvnaran Skalmutt na střeše auta z boku" style="width:100%;flex:1;object-fit:cover;display:block;border-radius:inherit;" />
-          <img src="/images/stresni-stan-02.png" alt="Střešní stan Søvnaran Skalmutt pohled zezadu" style="width:100%;flex:1;object-fit:cover;display:block;border-radius:inherit;" />
-          <img src="/images/stresni-stan-05.png" alt="Detail tašky se schodky Søvnaran" style="width:100%;flex:1;object-fit:cover;display:block;border-radius:inherit;" />
+          <sc-for list="{{ photos }}" as="p" hint-placeholder-count="4">
+            <div role="img" aria-label="{{ p.alt }}" onClick="{{ p.select }}" style="{{ p.style }}"></div>
+          </sc-for>
         </div>
       </div>
 
@@ -384,6 +386,7 @@ class Component extends DCLogic {
   DAY_PRICE = 490;
   MIN_DAYS = 3;
   state = {
+    activePhoto: 0,
     calOpen: false,
     month: new Date(new Date().getFullYear(), new Date().getMonth(), 1),
     from: new Date(new Date().getFullYear(), new Date().getMonth(), new Date().getDate()),
@@ -450,6 +453,26 @@ class Component extends DCLogic {
 
   shiftMonth = (n) => this.setState(s => ({month: new Date(s.month.getFullYear(), s.month.getMonth() + n, 1)}));
 
+  photosDefs = [
+    { src: '/images/produkt-stresni-stan.png', alt: 'Střešní stan až pro 4 osoby' },
+    { src: '/images/stresni-stan-01.png', alt: 'Střešní stan Søvnaran Skalmutt na střeše auta z boku' },
+    { src: '/images/stresni-stan-02.png', alt: 'Střešní stan Søvnaran Skalmutt pohled zezadu' },
+    { src: '/images/stresni-stan-05.png', alt: 'Detail tašky se schodky Søvnaran' },
+  ];
+
+  selectPhoto = (i) => this.setState({ activePhoto: i });
+  prevPhoto = () => this.setState(s => ({ activePhoto: (s.activePhoto - 1 + this.photosDefs.length) % this.photosDefs.length }));
+  nextPhoto = () => this.setState(s => ({ activePhoto: (s.activePhoto + 1) % this.photosDefs.length }));
+
+  onPhotoTouchStart = (e) => { this._touchStartX = e.touches[0].clientX; };
+  onPhotoTouchEnd = (e) => {
+    if (this._touchStartX == null) return;
+    const dx = e.changedTouches[0].clientX - this._touchStartX;
+    this._touchStartX = null;
+    if (Math.abs(dx) < 40) return;
+    if (dx < 0) this.nextPhoto(); else this.prevPhoto();
+  };
+
   included = [
     'Teleskopický hliníkový žebřík (až 230 cm)',
     'Integrovaná komfortní matrace',
@@ -471,7 +494,15 @@ class Component extends DCLogic {
   MONTHS = ['Leden','Únor','Březen','Duben','Květen','Červen','Červenec','Srpen','Září','Říjen','Listopad','Prosinec'];
 
   renderVals() {
-    const {month, from, to} = this.state;
+    const {month, from, to, activePhoto} = this.state;
+    const photos = this.photosDefs.map((p, i) => ({
+      alt: p.alt,
+      style: 'width:100%;flex:1;background-image:url(' + p.src + ');background-size:cover;background-position:center;border-radius:14px;cursor:pointer;'
+        + (i === activePhoto ? 'outline:2px solid #4c5c37;outline-offset:-2px;' : 'opacity:0.85;'),
+      select: () => this.selectPhoto(i),
+    }));
+    const mainPhoto = this.photosDefs[activePhoto];
+    const mainPhotoCss = 'url(' + mainPhoto.src + ')';
     const first = new Date(month.getFullYear(), month.getMonth(), 1);
     const offset = (first.getDay() + 6) % 7;
     const total = new Date(month.getFullYear(), month.getMonth() + 1, 0).getDate();
@@ -500,6 +531,9 @@ class Component extends DCLogic {
     const subtotal = n * this.DAY_PRICE;
 
     return {
+      photos, mainPhotoCss, mainPhotoAlt: mainPhoto.alt,
+      prevPhoto: this.prevPhoto, nextPhoto: this.nextPhoto,
+      onPhotoTouchStart: this.onPhotoTouchStart, onPhotoTouchEnd: this.onPhotoTouchEnd,
       included: this.included, specs: this.specs,
       calDays, weekdays: ['Po','Út','St','Čt','Pá','So','Ne'],
       monthLabel: `${this.MONTHS[month.getMonth()]} ${month.getFullYear()}`,
