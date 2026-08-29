@@ -19,6 +19,7 @@
 <meta name="twitter:description" content="Napište nám poptávku na vybavení nebo nás kontaktujte telefonicky či e-mailem.">
 <meta name="twitter:image" content="https://vemtoven.cz/images/hero-stan.png">
 <script src="/support.js"></script>
+<script src="/nav-toggle.js" defer></script>
 <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 </head>
 <body>
@@ -30,6 +31,10 @@
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
   body { margin:0; background:#f7f6f2; font-family:'Inter',sans-serif; color:#2f3323; }
+  .nav-toggle-btn{display:none;background:none;border:none;cursor:pointer;padding:6px;flex-shrink:0;color:#2f3323;}
+  .nav-toggle-btn .icon-close{display:none;}
+  .nav-toggle-btn.is-active .icon-open{display:none;}
+  .nav-toggle-btn.is-active .icon-close{display:block;}
   a { color:#4c5c37; }
   a:hover { color:#374428; }
   input::placeholder, textarea::placeholder { color:#b6b8a6; }
@@ -46,7 +51,10 @@
   }
   @media (max-width: 860px) {
     header { position:static !important; }
-    header > div { flex-direction:column !important; align-items:flex-start !important; gap:14px !important; }
+    .nav-toggle-btn{display:flex !important;align-items:center;justify-content:center;}
+    .nav-collapsible{display:none !important;}
+    .nav-collapsible.nav-open{display:flex !important;flex-direction:column !important;align-items:flex-start !important;width:100%;gap:14px !important;}
+    a.nav-collapsible.nav-open{justify-content:center !important;}
     header nav { flex-wrap:wrap !important; gap:14px !important; }
     [style*="grid-template-columns: minmax"] { grid-template-columns:minmax(0,1fr) !important; }
     [style*="position: sticky"] { position:static !important; }
@@ -56,7 +64,7 @@
   }
   @media (max-width: 640px) {
     header > div, section, footer > div { padding-left:20px !important; padding-right:20px !important; }
-    [style*="grid-template-columns: repeat(4"], [style*="grid-template-columns: repeat(5"], [style*="grid-template-columns: repeat(3"] { grid-template-columns:minmax(0,1fr) !important; }
+    [style*="grid-template-columns: repeat(4"], [style*="grid-template-columns: repeat(5"], [style*="grid-template-columns: repeat(3"] { grid-template-columns:repeat(2,minmax(0,1fr)) !important; }
     h1 { font-size:38px !important; }
     h2 { font-size:27px !important; }
     [style*="border-radius: 26px"], [style*="border-radius: 22px"] { padding:28px !important; }
@@ -75,13 +83,17 @@
       <img src="/images/logo-vemtoven.png" alt="Vem to Ven.cz" style="height:46px;width:auto;display:block;flex-shrink:0;" />
       </a>
     </div>
-    <nav style="display:flex;align-items:center;gap:clamp(14px,2vw,32px);font-size:14px;font-weight:500;white-space:nowrap;">
+    <button type="button" class="nav-toggle-btn" data-nav-toggle aria-label="Otevřít menu">
+      <svg class="icon-open" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      <svg class="icon-close" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="6" y1="6" x2="18" y2="18"/><line x1="18" y1="6" x2="6" y2="18"/></svg>
+    </button>
+    <nav class="nav-collapsible" style="display:flex;align-items:center;gap:clamp(14px,2vw,32px);font-size:14px;font-weight:500;white-space:nowrap;">
       <a href="/vybaveni/" style="color:#2f3323;text-decoration:none;">Vybavení k zapůjčení</a>
       <a href="/o-nas/" style="color:#2f3323;text-decoration:none;">O nás</a>
       <a href="/kontakt/" style="color:#4c5c37;text-decoration:none;font-weight:700;">Kontakt</a>
     </nav>
     <div style="display:flex;align-items:center;gap:16px;white-space:nowrap;">
-      <a href="/vybaveni/" style="background:#4c5c37;color:#f3efe4;padding:12px 22px;border-radius:100px;font-size:14px;font-weight:600;text-decoration:none;display:flex;align-items:center;gap:6px;white-space:nowrap;">Prohlédnout vybavení →</a>
+      <a href="/vybaveni/" class="nav-collapsible" style="background:#4c5c37;color:#f3efe4;padding:12px 22px;border-radius:100px;font-size:14px;font-weight:600;text-decoration:none;display:flex;align-items:center;gap:6px;white-space:nowrap;">Prohlédnout vybavení →</a>
     </div>
   </div>
 </header>
