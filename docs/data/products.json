@@ -1,7 +1,7 @@
 [
   {
     "id": "k1",
-    "href": "stresni-stan.html",
+    "href": "/stresni-stan/",
     "featured": true,
     "category": "Stany a kemping",
     "catKey": "tents",
@@ -12,11 +12,11 @@
     "dayPrice": 490,
     "minDays": 3,
     "deposit": "5 000 Kč",
-    "imgSrc": "images/produkt-stresni-stan.png"
+    "imgSrc": "/images/produkt-stresni-stan.png"
   },
   {
     "id": "k2",
-    "href": "produkt.html?p=k2",
+    "href": "/produkt/?p=k2",
     "featured": true,
     "category": "Nosiče kol a boxy",
     "catKey": "racks",
@@ -27,7 +27,7 @@
     "dayPrice": 290,
     "minDays": 3,
     "deposit": "2 000 Kč",
-    "imgSrc": "images/produkt-box-tazne.png",
+    "imgSrc": "/images/produkt-box-tazne.png",
     "description": "Prostorný zavazadlový box na tažné zařízení výrazně zvětší úložný prostor vašeho auta, aniž byste museli cokoliv vozit na střeše. Nakládá se pohodlně v úrovni kufru, nezvyšuje spotřebu jako střešní box a je ideální na rodinnou dovolenou i stěhování výbavy na kemp.",
     "stats": [
       {"label": "Objem", "value": "340 l"},
@@ -48,7 +48,7 @@
   },
   {
     "id": "k3",
-    "href": "produkt.html?p=k3",
+    "href": "/produkt/?p=k3",
     "featured": true,
     "category": "Nosiče kol · Sport",
     "catKey": "racks",
@@ -60,7 +60,7 @@
     "dayPrice": 290,
     "minDays": 3,
     "deposit": "2 000 Kč",
-    "imgSrc": "images/produkt-cyklonosic.png",
+    "imgSrc": "/images/produkt-cyklonosic.png",
     "description": "Špičkový nosič kol Thule VeloCompact na tažné zařízení. Kola jsou uchycená rychle a bezpečně, nosič se sklápí pro přístup do kufru a díky kompaktní konstrukci se dobře skladuje. Se čtvrtou pozicí (adaptér) odvezete kola pro celou rodinu.",
     "stats": [
       {"label": "Kapacita", "value": "4 kola"},
@@ -79,7 +79,7 @@
   },
   {
     "id": "k4",
-    "href": "produkt.html?p=k4",
+    "href": "/produkt/?p=k4",
     "featured": true,
     "category": "Nosiče kol a boxy",
     "catKey": "racks",
@@ -90,7 +90,7 @@
     "dayPrice": 190,
     "minDays": 3,
     "deposit": "2 000 Kč",
-    "imgSrc": "images/produkt-stresni-box.png",
+    "imgSrc": "/images/produkt-stresni-box.png",
     "description": "Aerodynamický střešní box Thule Pacific 700 s oboustranným otevíráním. Pojme lyže, kempingovou výbavu i objemná zavazadla a díky odolné konstrukci zvládne i dlouhou cestu k moři nebo do hor.",
     "stats": [
       {"label": "Objem", "value": "420 l"},
@@ -113,7 +113,7 @@
   },
   {
     "id": "k5",
-    "href": "produkt.html?p=k5",
+    "href": "/produkt/?p=k5",
     "featured": true,
     "category": "Sport",
     "catKey": "sport",
@@ -124,7 +124,7 @@
     "dayPrice": 190,
     "minDays": 3,
     "deposit": "2 000 Kč",
-    "imgSrc": "images/produkt-paddleboard.png",
+    "imgSrc": "/images/produkt-paddleboard.png",
     "description": "Nafukovací paddleboard Aqua Marina Vapor je ideální volba pro klidnou vodu, jezera i řeky. Rychle se nafoukne, unese i dospělého s dítětem a po vypuštění se vejde do batohu, který svezete v kufru auta.",
     "stats": [
       {"label": "Délka", "value": "315 cm"},
@@ -143,7 +143,7 @@
   },
   {
     "id": "k6",
-    "href": "produkt.html?p=k6",
+    "href": "/produkt/?p=k6",
     "featured": true,
     "category": "Stany a kemping",
     "catKey": "tents",
@@ -154,7 +154,7 @@
     "dayPrice": 150,
     "minDays": 3,
     "deposit": "2 000 Kč",
-    "imgSrc": "images/produkt-rodinny-stan.png",
+    "imgSrc": "/images/produkt-rodinny-stan.png",
     "description": "Rodinný stan Quechua Arpenaz 5.2 se dvěma spacími ložnicemi a prostornou obytnou částí. Technologie Fresh & Black výrazně snižuje teplotu uvnitř a zatemňuje ložnice, takže se ráno vyspíte i při plném slunci.",
     "stats": [
       {"label": "Kapacita", "value": "5 osob"},
@@ -173,7 +173,7 @@
   },
   {
     "id": "k7",
-    "href": "produkt.html?p=k7",
+    "href": "/produkt/?p=k7",
     "featured": false,
     "category": "Stany a kemping",
     "catKey": "tents",
@@ -184,7 +184,7 @@
     "dayPrice": 190,
     "minDays": 3,
     "deposit": "2 000 Kč",
-    "imgSrc": "images/produkt-pristresek.png",
+    "imgSrc": "/images/produkt-pristresek.png",
     "description": "Velký kempingový přístřešek pro až 10 osob poskytne stín i úkryt před deštěm. Ideální jako společenský prostor u stanů — vejde se pod něj stůl se židlemi i kempingová kuchyně.",
     "stats": [
       {"label": "Kapacita", "value": "10 osob"},
@@ -203,7 +203,7 @@
   },
   {
     "id": "k8",
-    "href": "produkt.html?p=k8",
+    "href": "/produkt/?p=k8",
     "featured": false,
     "category": "Stany a kemping",
     "catKey": "tents",
@@ -215,7 +215,7 @@
     "dayPrice": 80,
     "minDays": 3,
     "deposit": null,
-    "imgSrc": "images/produkt-kuchynka.png",
+    "imgSrc": "/images/produkt-kuchynka.png",
     "description": "Skládací kempingová kuchyňka vytvoří na kempu pořádnou pracovní plochu — odkládací police na nádobí, místo pro vařič i háčky na utěrky. Složí se do plochého vaku a postaví během minuty.",
     "stats": [
       {"label": "Police", "value": "3 úrovně"},
@@ -233,7 +233,7 @@
   },
   {
     "id": "k9",
-    "href": "produkt.html?p=k9",
+    "href": "/produkt/?p=k9",
     "featured": false,
     "category": "Stany a kemping",
     "catKey": "tents",
@@ -245,7 +245,7 @@
     "dayPrice": 40,
     "minDays": 3,
     "deposit": null,
-    "imgSrc": "images/produkt-varic.png",
+    "imgSrc": "/images/produkt-varic.png",
     "description": "Výkonný jednoplotýnkový vařič Campingaz Twister Plus PZ s piezo zapalováním. Zvládne uvařit vodu i připravit celé jídlo pro rodinu.",
     "stats": [
       {"label": "Výkon", "value": "2 900 W"},
@@ -263,7 +263,7 @@
   },
   {
     "id": "k10",
-    "href": "produkt.html?p=k10",
+    "href": "/produkt/?p=k10",
     "featured": false,
     "category": "Elektronika",
     "catKey": "other",
@@ -274,7 +274,7 @@
     "dayPrice": 490,
     "minDays": 1,
     "deposit": "2 000 Kč",
-    "imgSrc": "images/produkt-reproduktor.png",
+    "imgSrc": "/images/produkt-reproduktor.png",
     "description": "Přenosný reproduktor JBL PartyBox Encore Essential s výkonem 100 W, světelnou show a výdrží až 6 hodin na baterii. Ideální na oslavu, svatbu, firemní akci i večer u ohně — a půjčit si ho můžete klidně jen na jeden den.",
     "stats": [
       {"label": "Výkon", "value": "100 W"},
@@ -293,7 +293,7 @@
   },
   {
     "id": "k12",
-    "href": "produkt.html?p=k12",
+    "href": "/produkt/?p=k12",
     "featured": false,
     "category": "Stany a kemping",
     "catKey": "tents",
@@ -305,7 +305,7 @@
     "dayPrice": 90,
     "minDays": 3,
     "deposit": null,
-    "imgSrc": "images/produkt-stul-zidle.png",
+    "imgSrc": "/images/produkt-stul-zidle.png",
     "description": "Skládací kempingový stůl se čtyřmi židličkami — základ pohodlného posezení u stanu. Vše se složí do kompaktních vaků a snadno se vejde do kufru vedle ostatní výbavy.",
     "stats": [
       {"label": "Sada", "value": "stůl + 4 židle"},
@@ -323,7 +323,7 @@
   },
   {
     "id": "k13",
-    "href": "produkt.html?p=k13",
+    "href": "/produkt/?p=k13",
     "featured": false,
     "category": "Stany a kemping · Elektronika",
     "catKey": "tents",
@@ -336,7 +336,7 @@
     "dayPrice": 90,
     "minDays": 3,
     "deposit": null,
-    "imgSrc": "images/produkt-chladnicka.png",
+    "imgSrc": "/images/produkt-chladnicka.png",
     "description": "Termoelektrická autochladnička Rohnson R-4024 udrží jídlo i pití příjemně vychlazené po celou dobu na kempu. Chladí tiše a bez chladiva, napájí se z autozásuvky i ze sítě a ovládá se jednoduše.",
     "stats": [
       {"label": "Objem", "value": "24 l"},
