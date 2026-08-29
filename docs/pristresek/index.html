@@ -379,6 +379,9 @@ class Component extends DCLogic {
       return;
     }
     const raw = this.state.productsMap[this.currentKey(this.state.productsMap)];
+    const { from, to } = this.state;
+    const days = (from && to) ? Math.round((to - from) / 86400000) + 1 : 0;
+    const dateRange = (from && to) ? `${this.fmt(from)} – ${this.fmt(to)}` : 'nevybráno';
     this.setState({ status: 'sending' });
     window.emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, {
       from_name: this.state.form.name,
@@ -386,6 +389,10 @@ class Component extends DCLogic {
       phone: this.state.form.phone,
       message: this.state.form.note,
       product: raw.name,
+      date_range: dateRange,
+      days: days,
+      total_price: `${days * raw.dayPrice} Kč`,
+      deposit: raw.deposit || 'bez kauce',
       page: 'Detail produktu',
     }).then(() => {
       this.setState({ status: 'success', form: { name: '', phone: '', email: '', note: '' } });

@@ -401,6 +401,9 @@ class Component extends DCLogic {
       this.setState({ status: 'error' });
       return;
     }
+    const days = this.days();
+    const { from, to } = this.state;
+    const dateRange = (from && to) ? `${this.fmt(from)} – ${this.fmt(to)}` : 'nevybráno';
     this.setState({ status: 'sending' });
     window.emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, {
       from_name: this.state.form.name,
@@ -408,6 +411,10 @@ class Component extends DCLogic {
       phone: this.state.form.phone,
       message: this.state.form.note,
       product: 'Střešní stan pro 4 osoby',
+      date_range: dateRange,
+      days: days,
+      total_price: `${days * this.DAY_PRICE} Kč`,
+      deposit: '5 000 Kč',
       page: 'Detail produktu',
     }).then(() => {
       this.setState({ status: 'success', form: { name: '', phone: '', email: '', note: '' } });
