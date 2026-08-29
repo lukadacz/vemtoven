@@ -58,7 +58,8 @@
     a.nav-collapsible.nav-open{justify-content:center !important;}
     header nav { flex-wrap:wrap !important; gap:14px !important; }
     [style*="grid-template-columns: minmax"] { grid-template-columns:minmax(0,1fr) !important; }
-    [style*="position: sticky"]:not(header) { position:static !important; }
+    [style*="position: sticky"]:not(header):not(.o-nas-photo-wrap) { position:static !important; }
+    .o-nas-photo-wrap { position:relative !important; }
     footer [style*="grid-template-columns: 1.4fr"] { grid-template-columns:minmax(0,1fr) !important; gap:32px !important; }
     [style*="grid-template-columns: repeat(2, 1fr)"], [style*="grid-template-columns: repeat(2, minmax"] { grid-template-columns:minmax(0,1fr) !important; }
     section { padding-top:56px !important; padding-bottom:56px !important; }
@@ -140,7 +141,7 @@
   <div style="display:grid;grid-template-columns:minmax(0,0.82fr) minmax(0,1.18fr);gap:clamp(32px,4.4vw,64px);align-items:start;">
 
     <div style="min-width:0;align-self:stretch;">
-      <div style="position:sticky;top:110px;padding-bottom:70px;">
+      <div class="o-nas-photo-wrap" style="position:sticky;top:110px;padding-bottom:70px;">
       <img src="/images/o-nas.png" alt="O nás – VemToVen.cz" style="width:100%;height:clamp(380px,44vw,520px);object-fit:cover;display:block;border-radius:24px;" />
       <div style="position:absolute;bottom:0;left:-24px;background:#fff;border-radius:20px;padding:26px 30px;max-width:320px;box-shadow:0 14px 34px rgba(60,55,40,0.16);">
         <div style="font-size:11px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:#c07a2c;margin-bottom:12px;">Naše motto</div>
