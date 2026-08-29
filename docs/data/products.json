@@ -1,6 +1,7 @@
 [
   {
     "id": "k1",
+    "slug": "stresni-stan",
     "href": "/stresni-stan/",
     "featured": true,
     "category": "Stany a kemping",
@@ -16,7 +17,8 @@
   },
   {
     "id": "k2",
-    "href": "/produkt/?p=k2",
+    "slug": "box-na-tazne",
+    "href": "/box-na-tazne/",
     "featured": true,
     "category": "Nosiče kol a boxy",
     "catKey": "racks",
@@ -48,7 +50,8 @@
   },
   {
     "id": "k3",
-    "href": "/produkt/?p=k3",
+    "slug": "cyklonosic-thule",
+    "href": "/cyklonosic-thule/",
     "featured": true,
     "category": "Nosiče kol · Sport",
     "catKey": "racks",
@@ -79,7 +82,8 @@
   },
   {
     "id": "k4",
-    "href": "/produkt/?p=k4",
+    "slug": "stresni-box-thule",
+    "href": "/stresni-box-thule/",
     "featured": true,
     "category": "Nosiče kol a boxy",
     "catKey": "racks",
@@ -113,7 +117,8 @@
   },
   {
     "id": "k5",
-    "href": "/produkt/?p=k5",
+    "slug": "paddleboard",
+    "href": "/paddleboard/",
     "featured": true,
     "category": "Sport",
     "catKey": "sport",
@@ -143,7 +148,8 @@
   },
   {
     "id": "k6",
-    "href": "/produkt/?p=k6",
+    "slug": "rodinny-stan",
+    "href": "/rodinny-stan/",
     "featured": true,
     "category": "Stany a kemping",
     "catKey": "tents",
@@ -173,7 +179,8 @@
   },
   {
     "id": "k7",
-    "href": "/produkt/?p=k7",
+    "slug": "pristresek",
+    "href": "/pristresek/",
     "featured": false,
     "category": "Stany a kemping",
     "catKey": "tents",
@@ -203,7 +210,8 @@
   },
   {
     "id": "k8",
-    "href": "/produkt/?p=k8",
+    "slug": "kempingova-kuchynka",
+    "href": "/kempingova-kuchynka/",
     "featured": false,
     "category": "Stany a kemping",
     "catKey": "tents",
@@ -233,7 +241,8 @@
   },
   {
     "id": "k9",
-    "href": "/produkt/?p=k9",
+    "slug": "kempingovy-varic",
+    "href": "/kempingovy-varic/",
     "featured": false,
     "category": "Stany a kemping",
     "catKey": "tents",
@@ -263,7 +272,8 @@
   },
   {
     "id": "k10",
-    "href": "/produkt/?p=k10",
+    "slug": "reproduktor-jbl",
+    "href": "/reproduktor-jbl/",
     "featured": false,
     "category": "Elektronika",
     "catKey": "other",
@@ -293,7 +303,8 @@
   },
   {
     "id": "k12",
-    "href": "/produkt/?p=k12",
+    "slug": "kempingovy-stul",
+    "href": "/kempingovy-stul/",
     "featured": false,
     "category": "Stany a kemping",
     "catKey": "tents",
@@ -323,7 +334,8 @@
   },
   {
     "id": "k13",
-    "href": "/produkt/?p=k13",
+    "slug": "autochladnicka",
+    "href": "/autochladnicka/",
     "featured": false,
     "category": "Stany a kemping · Elektronika",
     "catKey": "tents",
