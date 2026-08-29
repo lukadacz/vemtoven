@@ -307,8 +307,8 @@
       </div>
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:14px;">
         <div>
-          <label style="font-size:12px;font-weight:600;">Telefon *</label>
-          <input name="phone" type="tel" required="{{ true }}" value="{{ form.phone }}" onChange="{{ onFieldChange }}" placeholder="+420 777 000 000" style="width:100%;margin-top:6px;padding:11px 13px;border-radius:10px;border:1px solid #e4ddc9;font-size:13px;box-sizing:border-box;" />
+          <label style="font-size:12px;font-weight:600;">Telefon</label>
+          <input name="phone" type="tel" value="{{ form.phone }}" onChange="{{ onFieldChange }}" placeholder="+420 777 000 000" style="width:100%;margin-top:6px;padding:11px 13px;border-radius:10px;border:1px solid #e4ddc9;font-size:13px;box-sizing:border-box;" />
         </div>
         <div>
           <label style="font-size:12px;font-weight:600;">E-mail *</label>
@@ -386,7 +386,10 @@ class Component extends DCLogic {
   DAY_PRICE = 490;
   MIN_DAYS = 3;
   state = {
-    calOpen: false, month: new Date(2026, 7, 1), from: new Date(2026, 7, 20), to: new Date(2026, 7, 22),
+    calOpen: false,
+    month: new Date(new Date().getFullYear(), new Date().getMonth(), 1),
+    from: new Date(new Date().getFullYear(), new Date().getMonth(), new Date().getDate()),
+    to: new Date(new Date().getFullYear(), new Date().getMonth(), new Date().getDate() + this.MIN_DAYS - 1),
     form: { name: '', phone: '', email: '', note: '' },
     status: 'idle',
   };
@@ -402,8 +405,8 @@ class Component extends DCLogic {
 
   onSubmit = (e) => {
     e.preventDefault();
-    const { name, phone, email } = this.state.form;
-    if (!name.trim() || !phone.trim() || !email.trim() || !window.emailjs) {
+    const { name, email } = this.state.form;
+    if (!name.trim() || !email.trim() || !window.emailjs) {
       this.setState({ status: 'error' });
       return;
     }

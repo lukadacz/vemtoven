@@ -440,9 +440,10 @@ class Component extends DCLogic {
     }
   }
 
-  defaultRange(minDays) {
-    const start = new Date(2026, 8, 4);
-    return { from: start, to: this.minEnd(start, minDays) };
+  defaultRange() {
+    const now = new Date();
+    const start = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+    return { from: start, to: this.minEnd(start, 3) };
   }
 
   componentDidMount() {
@@ -454,7 +455,8 @@ class Component extends DCLogic {
         products.forEach(p => { if (p.id !== 'k1') map[p.id] = p; });
         this._key = this.currentKey(map);
         this.updateSeoTags(map[this._key]);
-        this.setState({ productsMap: map, month: new Date(2026, 8, 1), ...this.defaultRange(map[this._key].minDays || 3) });
+        const now = new Date();
+        this.setState({ productsMap: map, month: new Date(now.getFullYear(), now.getMonth(), 1), ...this.defaultRange() });
       })
       .catch(e => console.error('[vemtoven] nepodařilo se načíst products.json', e));
 
@@ -464,8 +466,8 @@ class Component extends DCLogic {
       if (key === this._key) return;
       this._key = key;
       this.updateSeoTags(this.state.productsMap[key]);
-      const minDays = this.state.productsMap[key].minDays || 3;
-      this.setState({ month: new Date(2026, 8, 1), ...this.defaultRange(minDays) });
+      const now = new Date();
+      this.setState({ month: new Date(now.getFullYear(), now.getMonth(), 1), ...this.defaultRange() });
     };
     window.addEventListener('hashchange', this._onHash);
   }
