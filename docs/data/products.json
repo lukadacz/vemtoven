@@ -1,0 +1,356 @@
+[
+  {
+    "id": "k1",
+    "href": "stresni-stan.html",
+    "featured": true,
+    "category": "Stany a kemping",
+    "catKey": "tents",
+    "specific": "Søvnaran Skalmutt",
+    "name": "Střešní stan pro 4 osoby",
+    "price": "490 Kč",
+    "priceUnit": "/ den",
+    "dayPrice": 490,
+    "minDays": 3,
+    "deposit": "5 000 Kč",
+    "imgSrc": "images/produkt-stresni-stan.png"
+  },
+  {
+    "id": "k2",
+    "href": "produkt.html?p=k2",
+    "featured": true,
+    "category": "Nosiče kol a boxy",
+    "catKey": "racks",
+    "specific": "GP Calypso",
+    "name": "Box na tažné zařízení",
+    "price": "290 Kč",
+    "priceUnit": "/ den",
+    "dayPrice": 290,
+    "minDays": 3,
+    "deposit": "2 000 Kč",
+    "imgSrc": "images/produkt-box-tazne.png",
+    "description": "Prostorný zavazadlový box na tažné zařízení výrazně zvětší úložný prostor vašeho auta, aniž byste museli cokoliv vozit na střeše. Nakládá se pohodlně v úrovni kufru, nezvyšuje spotřebu jako střešní box a je ideální na rodinnou dovolenou i stěhování výbavy na kemp.",
+    "stats": [
+      {"label": "Objem", "value": "340 l"},
+      {"label": "Nosnost", "value": "45 kg"},
+      {"label": "Montáž", "value": "na tažné zařízení"},
+      {"label": "Hmotnost", "value": "12,5 kg"}
+    ],
+    "included": ["Uzamykatelný systém", "Sklopný mechanismus pro přístup do kufru", "Osobní předvedení montáže"],
+    "specs": [
+      {"label": "Model", "value": "GP Calypso"},
+      {"label": "Objem", "value": "340 l"},
+      {"label": "Rozměry", "value": "130 × 60 × 63 cm"},
+      {"label": "Maximální nosnost", "value": "45 kg"},
+      {"label": "Hmotnost", "value": "12,5 kg"},
+      {"label": "Uchycení", "value": "Kulové tažné zařízení (13pin)"},
+      {"label": "Registrační značka", "value": "Držák na SPZ a světla součástí"}
+    ]
+  },
+  {
+    "id": "k3",
+    "href": "produkt.html?p=k3",
+    "featured": true,
+    "category": "Nosiče kol · Sport",
+    "catKey": "racks",
+    "extraKeys": ["sport"],
+    "specific": "Thule VeloCompact 3 (926)",
+    "name": "Cyklonosič Thule pro 4 kola",
+    "price": "290 Kč",
+    "priceUnit": "/ den",
+    "dayPrice": 290,
+    "minDays": 3,
+    "deposit": "2 000 Kč",
+    "imgSrc": "images/produkt-cyklonosic.png",
+    "description": "Špičkový nosič kol Thule VeloCompact na tažné zařízení. Kola jsou uchycená rychle a bezpečně, nosič se sklápí pro přístup do kufru a díky kompaktní konstrukci se dobře skladuje. Se čtvrtou pozicí (adaptér) odvezete kola pro celou rodinu.",
+    "stats": [
+      {"label": "Kapacita", "value": "4 kola"},
+      {"label": "Nosnost", "value": "60 kg (max. 25 kg/kolo)"},
+      {"label": "Sklopný", "value": "ano, pro přístup do kufru"},
+      {"label": "Hmotnost", "value": "18,9 kg"}
+    ],
+    "included": ["Adaptér na 4. kolo", "Uzamykatelné rámy a nosič", "Osobní předvedení montáže"],
+    "specs": [
+      {"label": "Model", "value": "Thule VeloCompact 3 (926)"},
+      {"label": "Počet kol", "value": "4"},
+      {"label": "Maximální nosnost", "value": "60 kg (max. 25 kg/kolo)"},
+      {"label": "Uchycení", "value": "Kulové tažné zařízení (13pin)"},
+      {"label": "Vhodné i pro", "value": "E-biky (dle hmotnosti kol)"}
+    ]
+  },
+  {
+    "id": "k4",
+    "href": "produkt.html?p=k4",
+    "featured": true,
+    "category": "Nosiče kol a boxy",
+    "catKey": "racks",
+    "specific": "Thule Pacific 700 DS Aeroskin",
+    "name": "Střešní box Thule",
+    "price": "190 Kč",
+    "priceUnit": "/ den",
+    "dayPrice": 190,
+    "minDays": 3,
+    "deposit": "2 000 Kč",
+    "imgSrc": "images/produkt-stresni-box.png",
+    "description": "Aerodynamický střešní box Thule Pacific 700 s oboustranným otevíráním. Pojme lyže, kempingovou výbavu i objemná zavazadla a díky odolné konstrukci zvládne i dlouhou cestu k moři nebo do hor.",
+    "stats": [
+      {"label": "Objem", "value": "420 l"},
+      {"label": "Nosnost", "value": "50 kg"},
+      {"label": "Otevírání", "value": "z obou stran"},
+      {"label": "Hmotnost", "value": "15 kg"}
+    ],
+    "included": ["Montážní sada na příčníky", "Uzamykatelný centrální systém", "Osobní předvedení montáže"],
+    "specs": [
+      {"label": "Model", "value": "Thule Pacific 700 DS Aeroskin"},
+      {"label": "Objem", "value": "420 l"},
+      {"label": "Vnitřní rozměry", "value": "226 × 62 cm"},
+      {"label": "Délka", "value": "232 cm"},
+      {"label": "Šířka", "value": "70 cm"},
+      {"label": "Výška", "value": "40 cm"},
+      {"label": "Hmotnost", "value": "15 kg"},
+      {"label": "Maximální nosnost", "value": "50 kg"},
+      {"label": "Kompatibilita", "value": "Střešní příčníky s nosností min. 75 kg"}
+    ]
+  },
+  {
+    "id": "k5",
+    "href": "produkt.html?p=k5",
+    "featured": true,
+    "category": "Sport",
+    "catKey": "sport",
+    "specific": "Aqua Marina Vapor 10'4\"",
+    "name": "Paddleboard",
+    "price": "190 Kč",
+    "priceUnit": "/ den",
+    "dayPrice": 190,
+    "minDays": 3,
+    "deposit": "2 000 Kč",
+    "imgSrc": "images/produkt-paddleboard.png",
+    "description": "Nafukovací paddleboard Aqua Marina Vapor je ideální volba pro klidnou vodu, jezera i řeky. Rychle se nafoukne, unese i dospělého s dítětem a po vypuštění se vejde do batohu, který svezete v kufru auta.",
+    "stats": [
+      {"label": "Délka", "value": "315 cm"},
+      {"label": "Nosnost", "value": "do 110 kg"},
+      {"label": "Nafouknutí", "value": "do 10 minut"},
+      {"label": "Hmotnost", "value": "9 kg"}
+    ],
+    "included": ["Nastavitelné pádlo", "Pumpa s manometrem", "Leash (bezpečnostní poutko)", "Transportní batoh a opravná sada"],
+    "specs": [
+      {"label": "Model", "value": "Aqua Marina Vapor 10'4\""},
+      {"label": "Rozměry", "value": "315 × 79 × 15 cm"},
+      {"label": "Maximální nosnost", "value": "110 kg"},
+      {"label": "Provozní tlak", "value": "15 PSI"},
+      {"label": "Vhodné pro", "value": "Jezera, přehrady, klidné řeky"}
+    ]
+  },
+  {
+    "id": "k6",
+    "href": "produkt.html?p=k6",
+    "featured": true,
+    "category": "Stany a kemping",
+    "catKey": "tents",
+    "specific": "Quechua Arpenaz 5.2 F&B",
+    "name": "Rodinný stan pro 5 osob",
+    "price": "150 Kč",
+    "priceUnit": "/ den",
+    "dayPrice": 150,
+    "minDays": 3,
+    "deposit": "2 000 Kč",
+    "imgSrc": "images/produkt-rodinny-stan.png",
+    "description": "Rodinný stan Quechua Arpenaz 5.2 se dvěma spacími ložnicemi a prostornou obytnou částí. Technologie Fresh & Black výrazně snižuje teplotu uvnitř a zatemňuje ložnice, takže se ráno vyspíte i při plném slunci.",
+    "stats": [
+      {"label": "Kapacita", "value": "5 osob"},
+      {"label": "Ložnice", "value": "2 oddělené"},
+      {"label": "Vodní odolnost", "value": "2 000 mm"},
+      {"label": "Hmotnost", "value": "16,7 kg"}
+    ],
+    "included": ["Kompletní sada kolíků a napínacích lanek", "Podlážka obytné části", "Transportní vak"],
+    "specs": [
+      {"label": "Model", "value": "Quechua Arpenaz 5.2 Fresh & Black"},
+      {"label": "Kapacita", "value": "5 osob, 2 ložnice"},
+      {"label": "Obytná plocha", "value": "cca 5 m²"},
+      {"label": "Výška", "value": "200 cm"},
+      {"label": "Technologie", "value": "Fresh & Black (zatemnění a chlazení)"}
+    ]
+  },
+  {
+    "id": "k7",
+    "href": "produkt.html?p=k7",
+    "featured": false,
+    "category": "Stany a kemping",
+    "catKey": "tents",
+    "specific": "Quechua Arpenaz Base Fresh",
+    "name": "Přístřešek pro 10 osob",
+    "price": "190 Kč",
+    "priceUnit": "/ den",
+    "dayPrice": 190,
+    "minDays": 3,
+    "deposit": "2 000 Kč",
+    "imgSrc": "images/produkt-pristresek.png",
+    "description": "Velký kempingový přístřešek pro až 10 osob poskytne stín i úkryt před deštěm. Ideální jako společenský prostor u stanů — vejde se pod něj stůl se židlemi i kempingová kuchyně.",
+    "stats": [
+      {"label": "Kapacita", "value": "10 osob"},
+      {"label": "Plocha", "value": "cca 9 m²"},
+      {"label": "Výška", "value": "225 cm (185 cm u vstupu)"},
+      {"label": "Hmotnost", "value": "12 kg"}
+    ],
+    "included": ["Sada kolíků a lanek", "Boční stěna proti větru", "Transportní vak"],
+    "specs": [
+      {"label": "Model", "value": "Quechua Arpenaz Base Fresh"},
+      {"label": "Rozměry", "value": "300 × 300 cm"},
+      {"label": "Výška", "value": "225 cm (185 cm u vstupu)"},
+      {"label": "UV ochrana", "value": "UPF 50+"},
+      {"label": "Technologie", "value": "Fresh (snížení teploty ve stínu)"}
+    ]
+  },
+  {
+    "id": "k8",
+    "href": "produkt.html?p=k8",
+    "featured": false,
+    "category": "Stany a kemping",
+    "catKey": "tents",
+    "tentOnly": true,
+    "specific": "Quechua",
+    "name": "Kempingová kuchyňka",
+    "price": "80 Kč",
+    "priceUnit": "/ den",
+    "dayPrice": 80,
+    "minDays": 3,
+    "deposit": null,
+    "imgSrc": "images/produkt-kuchynka.png",
+    "description": "Skládací kempingová kuchyňka vytvoří na kempu pořádnou pracovní plochu — odkládací police na nádobí, místo pro vařič i háčky na utěrky. Složí se do plochého vaku a postaví během minuty.",
+    "stats": [
+      {"label": "Police", "value": "3 úrovně"},
+      {"label": "Postavení", "value": "do 1 minuty"},
+      {"label": "Složená", "value": "plochý vak"},
+      {"label": "Hmotnost", "value": "6 kg"}
+    ],
+    "included": ["Transportní vak", "Boční háčky na náčiní"],
+    "specs": [
+      {"label": "Značka", "value": "Quechua"},
+      {"label": "Pracovní výška", "value": "cca 80 cm"},
+      {"label": "Materiál", "value": "Hliníková konstrukce, odolná textilie"},
+      {"label": "Podmínka zápůjčky", "value": "Pouze společně se stanem"}
+    ]
+  },
+  {
+    "id": "k9",
+    "href": "produkt.html?p=k9",
+    "featured": false,
+    "category": "Stany a kemping",
+    "catKey": "tents",
+    "tentOnly": true,
+    "specific": "Campingaz Twister Plus PZ",
+    "name": "Kempingový vařič",
+    "price": "40 Kč",
+    "priceUnit": "/ den",
+    "dayPrice": 40,
+    "minDays": 3,
+    "deposit": null,
+    "imgSrc": "images/produkt-varic.png",
+    "description": "Výkonný jednoplotýnkový vařič Campingaz Twister Plus PZ s piezo zapalováním. Zvládne uvařit vodu i připravit celé jídlo pro rodinu.",
+    "stats": [
+      {"label": "Výkon", "value": "2 900 W"},
+      {"label": "Zapalování", "value": "piezo"},
+      {"label": "Kartuše", "value": "CV 470 / CV 300"},
+      {"label": "Hmotnost", "value": "215 g"}
+    ],
+    "specs": [
+      {"label": "Model", "value": "Campingaz Twister Plus PZ"},
+      {"label": "Výkon", "value": "2 900 W"},
+      {"label": "Typ kartuše", "value": "CV 470 Plus / CV 300 Plus (ventilová) – kartuše není součástí"},
+      {"label": "Zapalování", "value": "Piezoelektrické"},
+      {"label": "Podmínka zápůjčky", "value": "Pouze společně se stanem"}
+    ]
+  },
+  {
+    "id": "k10",
+    "href": "produkt.html?p=k10",
+    "featured": false,
+    "category": "Elektronika",
+    "catKey": "other",
+    "specific": "JBL PartyBox Encore Essential",
+    "name": "Přenosný reproduktor JBL",
+    "price": "490 Kč",
+    "priceUnit": "/ den",
+    "dayPrice": 490,
+    "minDays": 1,
+    "deposit": "2 000 Kč",
+    "imgSrc": "images/produkt-reproduktor.png",
+    "description": "Přenosný reproduktor JBL PartyBox Encore Essential s výkonem 100 W, světelnou show a výdrží až 6 hodin na baterii. Ideální na oslavu, svatbu, firemní akci i večer u ohně — a půjčit si ho můžete klidně jen na jeden den.",
+    "stats": [
+      {"label": "Výkon", "value": "100 W"},
+      {"label": "Výdrž", "value": "až 6 hodin"},
+      {"label": "Připojení", "value": "Bluetooth, AUX"},
+      {"label": "Hmotnost", "value": "8 kg"}
+    ],
+    "included": ["Napájecí kabel"],
+    "specs": [
+      {"label": "Model", "value": "JBL PartyBox Encore Essential"},
+      {"label": "Výkon", "value": "100 W RMS"},
+      {"label": "Výdrž baterie", "value": "až 6 hodin"},
+      {"label": "Odolnost", "value": "IPX4 (odolný proti stříkající vodě)"},
+      {"label": "Extra", "value": "Světelná show, podpora mikrofonu"}
+    ]
+  },
+  {
+    "id": "k12",
+    "href": "produkt.html?p=k12",
+    "featured": false,
+    "category": "Stany a kemping",
+    "catKey": "tents",
+    "tentOnly": true,
+    "specific": "Quechua",
+    "name": "Kempingový stůl a 4 židličky",
+    "price": "90 Kč",
+    "priceUnit": "/ den",
+    "dayPrice": 90,
+    "minDays": 3,
+    "deposit": null,
+    "imgSrc": "images/produkt-stul-zidle.png",
+    "description": "Skládací kempingový stůl se čtyřmi židličkami — základ pohodlného posezení u stanu. Vše se složí do kompaktních vaků a snadno se vejde do kufru vedle ostatní výbavy.",
+    "stats": [
+      {"label": "Sada", "value": "stůl + 4 židle"},
+      {"label": "Postavení", "value": "do 2 minut"},
+      {"label": "Nosnost židle", "value": "110 kg"},
+      {"label": "Velikost", "value": "Stůl pro 4–6 osob"}
+    ],
+    "specs": [
+      {"label": "Značka", "value": "Quechua"},
+      {"label": "Rozměry stolu", "value": "120 × 60 cm"},
+      {"label": "Nosnost židle", "value": "110 kg"},
+      {"label": "Materiál", "value": "Hliník a odolná textilie"},
+      {"label": "Podmínka zápůjčky", "value": "Pouze společně se stanem"}
+    ]
+  },
+  {
+    "id": "k13",
+    "href": "produkt.html?p=k13",
+    "featured": false,
+    "category": "Stany a kemping · Elektronika",
+    "catKey": "tents",
+    "extraKeys": ["other"],
+    "tentOnly": true,
+    "specific": "Rohnson R-4024",
+    "name": "Přenosná autochladnička",
+    "price": "90 Kč",
+    "priceUnit": "/ den",
+    "dayPrice": 90,
+    "minDays": 3,
+    "deposit": null,
+    "imgSrc": "images/produkt-chladnicka.png",
+    "description": "Termoelektrická autochladnička Rohnson R-4024 udrží jídlo i pití příjemně vychlazené po celou dobu na kempu. Chladí tiše a bez chladiva, napájí se z autozásuvky i ze sítě a ovládá se jednoduše.",
+    "stats": [
+      {"label": "Objem", "value": "24 l"},
+      {"label": "Chlazení", "value": "termoelektrické"},
+      {"label": "Napájení", "value": "12/24 V a 230 V"},
+      {"label": "Rozměry", "value": "45 × 39 × 29 cm"}
+    ],
+    "included": ["Kabel do autozásuvky 12/24 V", "Síťový adaptér 230 V"],
+    "specs": [
+      {"label": "Model", "value": "Rohnson R-4024"},
+      {"label": "Objem", "value": "24 litrů"},
+      {"label": "Typ chlazení", "value": "Termoelektrické (Peltierův článek)"},
+      {"label": "Chladicí výkon", "value": "až 20 °C pod okolní teplotu"},
+      {"label": "Podmínka zápůjčky", "value": "Pouze společně se stanem"}
+    ]
+  }
+]

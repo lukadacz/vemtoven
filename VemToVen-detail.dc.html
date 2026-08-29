@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+
+<helmet>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script src="./image-slot.js"></script>
+<style>
+  body { margin:0; background:#f7f6f2; font-family:'Inter',sans-serif; color:#2f3323; }
+  a { color:#4c5c37; }
+  a:hover { color:#374428; }
+  * { box-sizing:border-box; }
+  img, svg { max-width:100%; }
+  /* responsive */
+  @media (max-width: 1024px) {
+    header > div { padding-left:24px !important; padding-right:24px !important; }
+    header nav { font-size:13px !important; }
+    section, .om-wrap { padding-left:32px !important; padding-right:32px !important; }
+    [style*="grid-template-columns: repeat(4"], [style*="grid-template-columns: repeat(5"] { grid-template-columns:repeat(2,minmax(0,1fr)) !important; }
+    [style*="grid-template-columns: repeat(3, 1fr)"], [style*="grid-template-columns: repeat(3, minmax"] { grid-template-columns:repeat(2,minmax(0,1fr)) !important; }
+    [style*="grid-column: 4"] { grid-column:auto !important; grid-row:auto !important; }
+  }
+  @media (max-width: 860px) {
+    header { position:static !important; }
+    header > div { flex-direction:column !important; align-items:flex-start !important; gap:14px !important; }
+    header nav { flex-wrap:wrap !important; gap:14px !important; }
+    [style*="grid-template-columns: minmax"] { grid-template-columns:minmax(0,1fr) !important; }
+    [style*="position: sticky"] { position:static !important; }
+    footer [style*="grid-template-columns: 1.4fr"] { grid-template-columns:minmax(0,1fr) !important; gap:32px !important; }
+    [style*="grid-template-columns: repeat(2, 1fr)"], [style*="grid-template-columns: repeat(2, minmax"] { grid-template-columns:minmax(0,1fr) !important; }
+    section { padding-top:56px !important; padding-bottom:56px !important; }
+  }
+  @media (max-width: 640px) {
+    header > div, section, footer > div { padding-left:20px !important; padding-right:20px !important; }
+    [style*="grid-template-columns: repeat(4"], [style*="grid-template-columns: repeat(5"], [style*="grid-template-columns: repeat(3"] { grid-template-columns:minmax(0,1fr) !important; }
+    h1 { font-size:38px !important; }
+    h2 { font-size:27px !important; }
+    [style*="border-radius: 26px"], [style*="border-radius: 22px"] { padding:28px !important; }
+    [style*="left: -24px"], [style*="left: -28px"] { left:0 !important; max-width:100% !important; }
+    img[style*="max-height"] { max-width:100% !important; }
+  }
+
+</style>
+</helmet>
+
+<header style="display:flex;align-items:center;justify-content:space-between;gap:20px;padding:20px 0;flex-wrap:wrap;position:sticky;top:0;z-index:100;background:#f7f6f2;border-bottom:1px solid #e6e2d4;width:100%;">
+  <div style="max-width:1440px;margin:0 auto;width:100%;box-sizing:border-box;padding:0 32px;display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;">
+    <div style="display:flex;align-items:center;gap:10px;white-space:nowrap;">
+      <a href="VemToVen.dc.html" style="display:flex;align-items:center;gap:10px;text-decoration:none;">
+      <img src="images/logo-vemtoven.png" alt="Vem to Ven.cz" style="height:46px;width:auto;display:block;flex-shrink:0;" />
+      </a>
+    </div>
+    <nav style="display:flex;align-items:center;gap:clamp(14px,2vw,32px);font-size:14px;font-weight:500;white-space:nowrap;">
+      <a href="VemToVen-katalog.dc.html" style="color:#2f3323;text-decoration:none;">Vybavení k zapůjčení</a>
+      <a href="VemToVen-o-nas.dc.html" style="color:#2f3323;text-decoration:none;">O nás</a>
+      <a href="VemToVen-kontakt.dc.html" style="color:#2f3323;text-decoration:none;">Kontakt</a>
+    </nav>
+    <div style="display:flex;align-items:center;gap:16px;white-space:nowrap;">
+      <a href="VemToVen-katalog.dc.html" style="background:#4c5c37;color:#f3efe4;padding:12px 22px;border-radius:100px;font-size:14px;font-weight:600;text-decoration:none;display:flex;align-items:center;gap:6px;white-space:nowrap;">Prohlédnout vybavení →</a>
+    </div>
+  </div>
+</header>
+
+<div style="max-width:1440px;margin:0 auto;padding:40px 32px 110px;">
+
+  <a href="VemToVen-katalog.dc.html" style="display:inline-flex;align-items:center;gap:8px;background:#fff;border:1px solid #e4ddc9;border-radius:100px;padding:11px 20px;font-size:13px;font-weight:600;color:#2f3323;text-decoration:none;margin-bottom:32px;">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M11 18l-6-6 6-6"/></svg>
+    Zpět na přehled vybavení
+  </a>
+
+  <div style="display:grid;grid-template-columns:minmax(0,1fr) minmax(300px,460px);gap:40px;align-items:start;">
+
+    <!-- LEFT COLUMN -->
+    <div style="min-width:0;">
+      <div style="display:flex;gap:12px;height:420px;margin-bottom:28px;">
+        <div style="position:relative;border-radius:20px;overflow:hidden;flex:1;min-width:0;">
+          <img src="images/produkt-stresni-stan.png" alt="Střešní stan až pro 4 osoby" style="width:100%;height:100%;object-fit:cover;display:block;" />
+          <span style="position:absolute;top:16px;left:16px;background:#4c5c37;color:#fff;border-radius:100px;padding:7px 16px;font-size:13px;font-weight:600;z-index:2;">Autostan</span>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:12px;width:120px;flex-shrink:0;">
+          <image-slot id="detail-thumb-1" style="width:100%;flex:1;" shape="rounded" radius="14" placeholder="Detail stanu"></image-slot>
+          <image-slot id="detail-thumb-2" style="width:100%;flex:1;" shape="rounded" radius="14" placeholder="Interiér stanu"></image-slot>
+          <image-slot id="detail-thumb-3" style="width:100%;flex:1;" shape="rounded" radius="14" placeholder="Žebřík a montáž"></image-slot>
+          <div style="position:relative;flex:1;border-radius:14px;overflow:hidden;">
+            <image-slot id="detail-thumb-4" style="width:100%;height:100%;" shape="rounded" radius="14" placeholder="Stan v noci"></image-slot>
+            <div style="position:absolute;inset:0;background:rgba(28,33,20,0.55);display:flex;align-items:center;justify-content:center;pointer-events:none;">
+              <span style="color:#fff;font-size:12px;font-weight:700;text-align:center;line-height:1.3;">Více<br/>fotek</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div style="display:flex;align-items:center;gap:10px;font-size:12px;font-weight:700;letter-spacing:0.05em;text-transform:uppercase;margin-bottom:14px;">
+        <span style="color:#4c5c37;">Stany a kemping</span>
+        <span style="color:#c7c2a8;">●</span>
+        <span style="color:#8a8d7a;font-weight:600;text-transform:none;letter-spacing:0;">Søvnaran Skalmutt</span>
+      </div>
+      <h1 style="font-family:'Fraunces',serif;font-weight:600;font-size:42px;line-height:1.15;margin:0 0 20px;">Střešní stan až pro 4 osoby</h1>
+      <p style="font-size:15px;line-height:1.75;color:#5b5f4f;margin:0 0 32px;max-width:640px;">Autostan Sovnaran SKALMUTT s prostorem až pro 4 osoby je střešní stan určený jak pro rodinnou dovolenou, tak i pro náročné expedice. Velmi odolná nerozbitná konstrukce, elegantní a moderní tmavé provedení a jednoduchá instalace na střechu auta jsou samozřejmostí, stejně jako nízká váha, jednoduché rozložení a složení. Vhodný je pro všechna běžná osobní auta i dodávky.</p>
+      <a href="https://youtu.be/XU05go19fiM?si=BNLqeXAAm2Wygzc8" style="display:inline-flex;align-items:center;gap:11px;background:#fff;border:1px solid #e4ddc9;border-radius:100px;padding:12px 22px 12px 14px;font-size:14px;font-weight:600;color:#2f3323;text-decoration:none;margin-bottom:32px;">
+        <span style="width:32px;height:32px;border-radius:50%;background:#4c5c37;display:flex;align-items:center;justify-content:center;color:#fff;flex-shrink:0;"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5l12 7-12 7z"/></svg></span>
+        Video: jak stan správně rozložit a složit
+      </a>
+      <a href="https://www.sovnaran.cz/autostan-skalmutt-znacky-sovnaran/" style="display:inline-flex;align-items:center;gap:11px;background:#fff;border:1px solid #e4ddc9;border-radius:100px;padding:12px 22px 12px 14px;font-size:14px;font-weight:600;color:#2f3323;text-decoration:none;margin:0 0 32px 12px;">
+        <span style="width:32px;height:32px;border-radius:50%;background:#4c5c37;display:flex;align-items:center;justify-content:center;color:#fff;flex-shrink:0;"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M14 4h6v6"/><path d="M20 4l-9 9"/><path d="M18 14v5a1 1 0 01-1 1H5a1 1 0 01-1-1V7a1 1 0 011-1h5"/></svg></span>
+        Detail produktu na webu výrobce
+      </a>
+
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:16px;margin-bottom:28px;">
+        <div style="background:#fff;border-radius:14px;padding:20px 16px;text-align:center;">
+          <div style="color:#4c5c37;margin-bottom:10px;display:flex;justify-content:center;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="8" cy="8" r="3"/><circle cx="17" cy="9" r="2.4"/><path d="M2 21v-1a6 6 0 016-6h1a6 6 0 016 6v1"/><path d="M15 21v-1a5 5 0 015-5"/></svg></div>
+          <div style="font-size:12px;color:#8a8d7a;margin-bottom:4px;">Kapacita</div>
+          <div style="font-size:14px;font-weight:700;">až 4 osoby<br/>(2 dospělí + 2 děti)</div>
+        </div>
+        <div style="background:#fff;border-radius:14px;padding:20px 16px;text-align:center;">
+          <div style="color:#4c5c37;margin-bottom:10px;display:flex;justify-content:center;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><rect x="3" y="8" width="18" height="8" rx="2"/><path d="M3 12h18M7 8V6M17 8V6"/></svg></div>
+          <div style="font-size:12px;color:#8a8d7a;margin-bottom:4px;">Rozměry lůžka</div>
+          <div style="font-size:14px;font-weight:700;">220 × 185 cm</div>
+        </div>
+        <div style="background:#fff;border-radius:14px;padding:20px 16px;text-align:center;">
+          <div style="color:#4c5c37;margin-bottom:10px;display:flex;justify-content:center;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="5" y="9" width="14" height="11" rx="2"/><path d="M9 9V7a3 3 0 016 0v2"/></svg></div>
+          <div style="font-size:12px;color:#8a8d7a;margin-bottom:4px;">Tloušťka matrace</div>
+          <div style="font-size:14px;font-weight:700;">5 cm</div>
+        </div>
+        <div style="background:#fff;border-radius:14px;padding:20px 16px;text-align:center;">
+          <div style="color:#4c5c37;margin-bottom:10px;display:flex;justify-content:center;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="5" y="9" width="14" height="11" rx="2"/><path d="M9 9V7a3 3 0 016 0v2"/></svg></div>
+          <div style="font-size:12px;color:#8a8d7a;margin-bottom:4px;">Hmotnost</div>
+          <div style="font-size:14px;font-weight:700;">55 kg</div>
+        </div>
+      </div>
+
+      <h2 style="font-family:'Fraunces',serif;font-weight:600;font-size:24px;margin:0 0 18px;">Půjčujeme s tímto příslušenstvím</h2>
+      <div style="background:#fff;border-radius:16px;padding:24px;margin-bottom:32px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px 24px;">
+        <sc-for list="{{ included }}" as="item" hint-placeholder-count="5">
+          <div style="display:flex;align-items:center;gap:11px;font-size:14px;color:#3c4030;">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#4c5c37" stroke-width="2.4" style="flex-shrink:0;"><path d="M5 13l4 4L19 7"/></svg>
+            {{ item }}
+          </div>
+        </sc-for>
+      </div>
+
+      <h2 style="font-family:'Fraunces',serif;font-weight:600;font-size:24px;margin:0 0 18px;">Podrobné technické parametry</h2>
+      <div style="background:#fff;border-radius:16px;overflow:hidden;margin-bottom:28px;">
+        <sc-for list="{{ specs }}" as="row" hint-placeholder-count="5">
+          <div style="display:flex;justify-content:space-between;padding:18px 24px;border-bottom:1px solid #efedE3;font-size:14px;">
+            <span style="color:#6b6f5e;">{{ row.label }}</span>
+            <span style="font-weight:700;">{{ row.value }}</span>
+          </div>
+        </sc-for>
+      </div>
+
+      <div style="background:#fbf4e6;border:1.5px solid #ecd9b4;border-radius:16px;padding:22px 26px;display:flex;gap:16px;align-items:flex-start;">
+        <div style="width:38px;height:38px;border-radius:12px;background:#f6e6c8;display:flex;align-items:center;justify-content:center;color:#c07a2c;flex-shrink:0;">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="9" width="15" height="8" rx="1"/><path d="M16 12h3.5a1.5 1.5 0 011.4 1l1 3a1 1 0 01-1 1.5H16"/><circle cx="6" cy="19" r="1.8"/><circle cx="17" cy="19" r="1.8"/></svg>
+        </div>
+        <div>
+          <div style="font-weight:700;font-size:15px;margin-bottom:4px;color:#5c4a2c;">Osobní předání ve Frýdku-Místku</div>
+          <div style="font-size:13px;color:#6b573a;line-height:1.6;">Předání i vrácení probíhá pohodlně po vzájemné domluvě. Vše vám osobně vysvětlíme a v případě potřeby pomůžeme s montáží na vaše auto.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- RIGHT COLUMN -->
+    <div style="background:#fff;border-radius:20px;padding:32px;min-width:0;width:100%;max-width:460px;box-sizing:border-box;">
+      <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:16px;margin-bottom:24px;">
+        <div>
+          <div style="font-size:12px;font-weight:700;letter-spacing:0.05em;color:#8a8d7a;text-transform:uppercase;margin-bottom:6px;">Cena zápůjčky</div>
+          <div style="font-family:'Fraunces',serif;font-size:38px;font-weight:600;line-height:1;">490 Kč <span style="font-size:16px;font-weight:500;color:#8a8d7a;font-family:'Inter',sans-serif;">/ den</span></div>
+        </div>
+        <div style="display:flex;align-items:flex-start;gap:8px;background:#fbf4e6;border-radius:12px;padding:10px 13px;max-width:170px;flex-shrink:0;">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#c07a2c" stroke-width="2" stroke-linecap="round" style="flex-shrink:0;margin-top:1px;"><circle cx="12" cy="12" r="9"/><path d="M12 7v6"/><path d="M12 16.5h.01"/></svg>
+          <div style="font-size:11.5px;color:#5c4a2c;line-height:1.5;">Minimální doba zapůjčení je <strong>3 dny</strong>.</div>
+        </div>
+      </div>
+
+      <div style="display:flex;align-items:center;gap:8px;font-size:13px;font-weight:600;margin-bottom:12px;">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#4c5c37" stroke-width="2"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>
+        Termín výpůjčky
+      </div>
+      <div>
+        <div style="border:1px solid #e4ddc9;border-radius:14px;padding:16px;margin-bottom:16px;">
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:12px;">
+            <button onClick="{{ prevMonth }}" style="background:#f3f1e9;border:none;width:28px;height:28px;border-radius:8px;cursor:pointer;color:#4c5c37;font-size:14px;line-height:1;">‹</button>
+            <div style="font-size:13px;font-weight:700;">{{ monthLabel }}</div>
+            <button onClick="{{ nextMonth }}" style="background:#f3f1e9;border:none;width:28px;height:28px;border-radius:8px;cursor:pointer;color:#4c5c37;font-size:14px;line-height:1;">›</button>
+          </div>
+          <div style="display:grid;grid-template-columns:repeat(7,1fr);gap:4px;margin-bottom:6px;">
+            <sc-for list="{{ weekdays }}" as="w" hint-placeholder-count="7">
+              <div style="text-align:center;font-size:10px;font-weight:700;color:#a8ab97;text-transform:uppercase;">{{ w }}</div>
+            </sc-for>
+          </div>
+          <div style="display:grid;grid-template-columns:repeat(7,1fr);gap:4px;">
+            <sc-for list="{{ calDays }}" as="d" hint-placeholder-count="35">
+              <button onClick="{{ d.pick }}" style="{{ d.style }}">{{ d.label }}</button>
+            </sc-for>
+          </div>
+          <div style="font-size:11px;color:#8a8d7a;margin-top:12px;">{{ calHint }}</div>
+        </div>
+      </div>
+      <div style="background:#f3f1e9;border-radius:12px;padding:14px 16px;display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;">
+        <div>
+          <div style="font-size:11px;color:#8a8d7a;margin-bottom:4px;">Vybraný termín</div>
+          <div style="font-size:14px;font-weight:700;">{{ rangeLabel }}</div>
+        </div>
+        <span style="background:#4c5c37;color:#fff;border-radius:100px;padding:6px 14px;font-size:12px;font-weight:700;">{{ dayCountLabel }}</span>
+      </div>
+      <div style="border-top:1px solid #eee9d9;padding-top:18px;margin-bottom:22px;">
+        <div style="display:flex;justify-content:space-between;font-size:13px;color:#8a8d7a;margin-bottom:10px;">
+          <span>{{ priceLineLabel }}</span>
+          <span>{{ subtotalLabel }}</span>
+        </div>
+        <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:10px;">
+          <span style="font-weight:700;font-size:15px;">Orientační cena celkem:</span>
+          <span style="font-family:'Fraunces',serif;font-size:26px;font-weight:600;">{{ totalPrice }} Kč</span>
+        </div>
+        <div style="display:flex;align-items:center;gap:9px;background:#fbf4e6;border:1.5px solid #ecd9b4;border-radius:10px;padding:11px 14px;font-size:13px;font-weight:600;color:#5c4a2c;">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#c07a2c" stroke-width="2" style="flex-shrink:0;"><circle cx="12" cy="12" r="9"/><path d="M9 12l2 2 4-4"/></svg>
+          Vratná kauce při předání: <strong>5 000 Kč</strong>
+        </div>
+      </div>
+
+      <div style="border-top:2px solid #eae4d2;margin:6px 0 26px;"></div>
+      <div style="font-family:'Fraunces',serif;font-size:19px;font-weight:700;color:#243318;margin-bottom:18px;">Kontaktní údaje</div>
+      <div style="margin-bottom:14px;">
+        <label style="font-size:12px;font-weight:600;">Jméno a příjmení *</label>
+        <input placeholder="Jan Novák" style="width:100%;margin-top:6px;padding:11px 13px;border-radius:10px;border:1px solid #e4ddc9;font-size:13px;box-sizing:border-box;" />
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:14px;">
+        <div>
+          <label style="font-size:12px;font-weight:600;">Telefon *</label>
+          <input placeholder="+420 777 000 000" style="width:100%;margin-top:6px;padding:11px 13px;border-radius:10px;border:1px solid #e4ddc9;font-size:13px;box-sizing:border-box;" />
+        </div>
+        <div>
+          <label style="font-size:12px;font-weight:600;">E-mail *</label>
+          <input placeholder="jan@novak.cz" style="width:100%;margin-top:6px;padding:11px 13px;border-radius:10px;border:1px solid #e4ddc9;font-size:13px;box-sizing:border-box;" />
+        </div>
+      </div>
+      <div style="margin-bottom:20px;">
+        <label style="font-size:12px;font-weight:600;">Poznámka / model vozu (volitelné)</label>
+        <textarea placeholder="Např. Škoda Octavia Combi, vyzvednutí v pátek odpoledne..." rows="2" style="width:100%;margin-top:6px;padding:11px 13px;border-radius:10px;border:1px solid #e4ddc9;font-size:13px;font-family:inherit;resize:vertical;box-sizing:border-box;"></textarea>
+      </div>
+      <button style="width:100%;background:#4c5c37;color:#f3efe4;border:none;padding:15px;border-radius:100px;font-size:14px;font-weight:700;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:8px;margin-bottom:16px;">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13"/><path d="M22 2l-7 20-4-9-9-4 20-7z"/></svg>
+        Odeslat nezávaznou poptávku
+      </button>
+      <div style="font-size:12px;color:#8a8d7a;text-align:center;margin-bottom:18px;">Poptávka je zcela nezávazná. Odpovíme vám obratem na e-mail nebo telefon.</div>
+      <div style="text-align:center;font-size:13px;font-weight:600;display:flex;align-items:center;justify-content:center;gap:8px;">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#4c5c37" stroke-width="2"><path d="M4 4h4l2 5-2.5 1.5a12 12 0 006 6L15 14l5 2v4a2 2 0 01-2 2C9.5 22 2 14.5 2 6a2 2 0 012-2z"/></svg>
+        Nebo zavolejte přímo: +420 720 986 966
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<footer style="background:#333e28;color:#e4e2d3;padding:56px 0 28px;width:100%;">
+  <div style="max-width:1440px;margin:0 auto;padding:0 64px;box-sizing:border-box;">
+  <div style="display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:48px;margin-bottom:40px;">
+    <div>
+      <div style="display:flex;align-items:center;gap:10px;margin-bottom:16px;">
+        <img src="images/logo-vemtoven-light.png" alt="Vem to Ven.cz" style="height:42px;width:auto;display:block;flex-shrink:0;" />
+      </div>
+      <p style="font-size:13px;color:#b7b6a4;line-height:1.7;max-width:320px;margin:0 0 20px;">Půjčovna outdoorového vybavení ve Frýdku-Místku. Ušetříme vám místo v garáži i peněženku. Střešní stany, kempingové vybavení a nosiče kol na jednu poptávku.</p>
+      <a href="mailto:info@vemtoven.cz" style="background:transparent;color:#fff;border:1px solid #5b6650;padding:11px 20px;border-radius:100px;font-size:13px;font-weight:600;text-decoration:none;display:inline-flex;align-items:center;gap:8px;"><svg width="15" height="15" style="flex-shrink:0;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 6l9 7 9-7"/></svg>Napsat poptávku na info@vemtoven.cz</a>
+    </div>
+    <div>
+      <div style="font-size:12px;font-weight:700;letter-spacing:0.06em;color:#9aa08a;margin-bottom:16px;">NAVIGACE</div>
+      <div style="display:flex;flex-direction:column;gap:12px;font-size:14px;">
+        <a href="VemToVen.dc.html" style="color:#e4e2d3;text-decoration:none;">Úvodní stránka</a>
+        <a href="VemToVen-katalog.dc.html" style="color:#e4e2d3;text-decoration:none;">Vybavení k zapůjčení</a>
+        <a href="VemToVen-o-nas.dc.html" style="color:#e4e2d3;text-decoration:none;">O nás</a>
+        <a href="VemToVen-kontakt.dc.html" style="color:#e4e2d3;text-decoration:none;">Kontakt</a>
+      </div>
+    </div>
+    <div>
+      <div style="font-size:12px;font-weight:700;letter-spacing:0.06em;color:#9aa08a;margin-bottom:16px;">KONTAKT &amp; POPTÁVKY</div>
+      <div style="display:flex;flex-direction:column;gap:12px;font-size:14px;color:#e4e2d3;">
+        <div style="display:flex;align-items:flex-start;gap:9px;"><svg width="14" height="14" style="flex-shrink:0;margin-top:3px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 6l9 7 9-7"/></svg>info@vemtoven.cz</div>
+        <div style="display:flex;align-items:flex-start;gap:9px;"><svg width="14" height="14" style="flex-shrink:0;margin-top:3px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h4l2 5-2.5 1.5a12 12 0 006 6L15 14l5 2v4a2 2 0 01-2 2C9.5 22 2 14.5 2 6a2 2 0 012-2z"/></svg>+420 720 986 966</div>
+        <div style="display:flex;align-items:flex-start;gap:9px;"><svg width="14" height="14" style="flex-shrink:0;margin-top:3px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1.2" fill="currentColor" stroke="none"/></svg><a href="https://www.instagram.com/vemtoven.cz" style="color:#e4e2d3;text-decoration:none;">@vemtoven.cz</a></div>
+        <div style="display:flex;align-items:flex-start;gap:9px;"><svg width="14" height="14" style="flex-shrink:0;margin-top:3px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h-2.5A4.5 4.5 0 008 7.5V10H5.5v4H8v7h4v-7h3l.7-4H12V7.8c0-.7.4-1.1 1.1-1.1H15z"/></svg><a href="https://www.facebook.com/vemtoven.cz" style="color:#e4e2d3;text-decoration:none;">VemToVen.cz</a></div>
+      </div>
+    </div>
+  </div>
+  <div style="border-top:1px solid #4a5540;padding-top:22px;display:flex;justify-content:space-between;font-size:12px;color:#8f9280;flex-wrap:wrap;gap:10px;">
+    <span>© 2026 VemToVen.cz – Všechna práva vyhrazena. Méně pořizování. Více výletů.</span>
+    <div style="display:flex;gap:20px;">
+      <span>Obchodní podmínky</span>
+      <span>Půjčovní řád</span>
+      <span>Ochrana soukromí a GDPR</span>
+    </div>
+  </div>
+  </div>
+</footer>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+
+class Component extends DCLogic {
+  DAY_PRICE = 490;
+  MIN_DAYS = 3;
+  state = { calOpen: false, month: new Date(2026, 7, 1), from: new Date(2026, 7, 20), to: new Date(2026, 7, 22) };
+
+  fmt = (d) => d ? `${String(d.getDate()).padStart(2,'0')}. ${String(d.getMonth()+1).padStart(2,'0')}. ${d.getFullYear()}` : '—';
+  same = (a, b) => a && b && a.toDateString() === b.toDateString();
+  days = () => {
+    const {from, to} = this.state;
+    if (!from || !to) return 0;
+    return Math.round((to - from) / 86400000) + 1;
+  };
+
+  minEnd = (from) => new Date(from.getFullYear(), from.getMonth(), from.getDate() + this.MIN_DAYS - 1);
+
+  pickDay = (d) => {
+    const {from, to} = this.state;
+    if (!from || to) return this.setState({from: d, to: null});
+    if (d < this.minEnd(from)) return this.setState({from: d, to: null});
+    this.setState({to: d});
+  };
+
+  shiftMonth = (n) => this.setState(s => ({month: new Date(s.month.getFullYear(), s.month.getMonth() + n, 1)}));
+
+  included = [
+    'Teleskopický hliníkový žebřík (až 230 cm)',
+    'Integrovaná komfortní matrace',
+    'Závěsný venkovní vak na obuv',
+    'LED osvětlení interiéru',
+    'Powerbanka pro osvětlení',
+  ];
+
+  specs = [
+    {label:'Model', value:'Søvnaran Skalmutt'},
+    {label:'Typ konstrukce', value:'Výklopný (bočně otevíraný) hard-shell'},
+    {label:'Spaní', value:'5 cm vysoká matrace ze studené pěny o rozměru 220 × 185 cm'},
+    {label:'Okna a vstup', value:'2 střešní okna, 3 boční okna a jeden prostorný vstup'},
+    {label:'Rozložení a složení', value:'Moderní a jednoduchý systém, bez tyček do oken'},
+    {label:'Materiál plátna', value:'Vodoodpudivý polyester / ripstop bavlna'},
+    {label:'Kompatibilita', value:'Vozy s příčníky s dynamickou nosností min. 75 kg'},
+  ];
+
+  MONTHS = ['Leden','Únor','Březen','Duben','Květen','Červen','Červenec','Srpen','Září','Říjen','Listopad','Prosinec'];
+
+  renderVals() {
+    const {month, from, to} = this.state;
+    const first = new Date(month.getFullYear(), month.getMonth(), 1);
+    const offset = (first.getDay() + 6) % 7;
+    const total = new Date(month.getFullYear(), month.getMonth() + 1, 0).getDate();
+    const base = 'border:none;border-radius:8px;padding:8px 0;font-size:12px;font-weight:600;cursor:pointer;font-family:inherit;';
+
+    const calDays = [];
+    for (let i = 0; i < offset; i++) calDays.push({label:'', style:'visibility:hidden;'+base, pick:()=>{}});
+    const awaitingEnd = from && !to;
+    for (let d = 1; d <= total; d++) {
+      const date = new Date(month.getFullYear(), month.getMonth(), d);
+      const isEnd = this.same(date, from) || this.same(date, to);
+      const inRange = from && to && date > from && date < to;
+      const tooShort = awaitingEnd && date > from && date < this.minEnd(from);
+      calDays.push({
+        label: String(d),
+        style: base + (isEnd ? 'background:#4c5c37;color:#fff;'
+          : inRange ? 'background:#e8ecdd;color:#3c4a2c;'
+          : tooShort ? 'background:#f7f6f2;color:#cdd0c0;cursor:not-allowed;'
+          : 'background:#f7f6f2;color:#3c4030;'),
+        pick: tooShort ? (() => {}) : (() => this.pickDay(date)),
+      });
+    }
+
+    const n = this.days();
+    const dayWord = n === 1 ? 'den' : (n < 5 ? 'dny' : 'dnů');
+    const subtotal = n * this.DAY_PRICE;
+
+    return {
+      included: this.included, specs: this.specs,
+      calDays, weekdays: ['Po','Út','St','Čt','Pá','So','Ne'],
+      monthLabel: `${this.MONTHS[month.getMonth()]} ${month.getFullYear()}`,
+      calHint: to ? '' : `Vyberte datum konce zápůjčky – nejdříve ${this.fmt(this.minEnd(from))} (minimum ${this.MIN_DAYS} dny).`,
+      prevMonth: () => this.shiftMonth(-1),
+      nextMonth: () => this.shiftMonth(1),
+      fromLabel: this.fmt(from), toLabel: this.fmt(to),
+      rangeLabel: to ? `${this.fmt(from)} – ${this.fmt(to)}` : `${this.fmt(from)} – ?`,
+      dayCountLabel: n ? `${n} ${dayWord}` : 'Vyberte konec',
+      priceLineLabel: n ? `Půjčovné (${n}× ${this.DAY_PRICE} Kč)` : 'Půjčovné',
+      subtotalLabel: `${subtotal} Kč`,
+      totalPrice: subtotal,
+    };
+  }
+}
+
+</script>
+</body>
+</html>

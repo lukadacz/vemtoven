@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>VemToVen.cz – Půjčovna outdoorového vybavení Frýdek-Místek</title>
+<meta name="description" content="Půjčte si střešní stan, nosič kol, paddleboard nebo kempingové vybavení ve Frýdku-Místku. Osobní domluva, žádný e-shop. Méně pořizování, více výletů.">
+<link rel="canonical" href="https://vemtoven.cz/">
+<link rel="icon" type="image/png" href="images/logo-vemtoven.png">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="cs_CZ">
+<meta property="og:site_name" content="VemToVen.cz">
+<meta property="og:url" content="https://vemtoven.cz/">
+<meta property="og:title" content="VemToVen.cz – Půjčovna outdoorového vybavení Frýdek-Místek">
+<meta property="og:description" content="Půjčte si střešní stan, nosič kol, paddleboard nebo kempingové vybavení ve Frýdku-Místku. Osobní domluva, žádný e-shop. Méně pořizování, více výletů.">
+<meta property="og:image" content="https://vemtoven.cz/images/hero-stan.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="VemToVen.cz – Půjčovna outdoorového vybavení Frýdek-Místek">
+<meta name="twitter:description" content="Půjčte si střešní stan, nosič kol, paddleboard nebo kempingové vybavení ve Frýdku-Místku.">
+<meta name="twitter:image" content="https://vemtoven.cz/images/hero-stan.png">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+
+<helmet>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+  body { margin:0; background:#f7f6f2; font-family:'Inter',sans-serif; color:#2f3323; }
+  a { color:#4c5c37; }
+  a:hover { color:#374428; }
+  .brand-card img { max-width:100%; max-height:68px; width:auto; object-fit:contain; }
+  * { box-sizing:border-box; }
+  img, svg { max-width:100%; }
+  /* responsive */
+  @media (max-width: 1024px) {
+    [style*="grid-template-columns: minmax(280px"] { grid-template-columns:minmax(0,1fr) !important; }
+    header > div { padding-left:24px !important; padding-right:24px !important; }
+    header nav { font-size:13px !important; }
+    section, .om-wrap { padding-left:32px !important; padding-right:32px !important; }
+    [style*="grid-template-columns: repeat(4"], [style*="grid-template-columns: repeat(5"] { grid-template-columns:repeat(2,minmax(0,1fr)) !important; }
+    [style*="grid-template-columns: repeat(3, 1fr)"], [style*="grid-template-columns: repeat(3, minmax"] { grid-template-columns:repeat(2,minmax(0,1fr)) !important; }
+    [style*="grid-column: 4"], [style*="grid-area: 1 / 4"] { grid-area:auto !important; grid-column:auto !important; grid-row:auto !important; }
+  }
+  @media (max-width: 860px) {
+    header { position:static !important; }
+    header > div { flex-direction:column !important; align-items:flex-start !important; gap:14px !important; }
+    header nav { flex-wrap:wrap !important; gap:14px !important; }
+    [style*="grid-template-columns: minmax"] { grid-template-columns:minmax(0,1fr) !important; }
+    [style*="position: sticky"] { position:static !important; }
+    footer [style*="grid-template-columns: 1.4fr"] { grid-template-columns:minmax(0,1fr) !important; gap:32px !important; }
+    [style*="grid-template-columns: repeat(2, 1fr)"], [style*="grid-template-columns: repeat(2, minmax"] { grid-template-columns:minmax(0,1fr) !important; }
+    section { padding-top:56px !important; padding-bottom:56px !important; }
+  }
+  @media (max-width: 640px) {
+    header > div, section, footer > div { padding-left:20px !important; padding-right:20px !important; }
+    [style*="grid-template-columns: repeat(4"], [style*="grid-template-columns: repeat(5"], [style*="grid-template-columns: repeat(3"] { grid-template-columns:minmax(0,1fr) !important; }
+    h1 { font-size:38px !important; }
+    h2 { font-size:27px !important; }
+    [style*="border-radius: 26px"], [style*="border-radius: 22px"] { padding:28px !important; }
+    [style*="left: -24px"], [style*="left: -28px"] { left:0 !important; max-width:100% !important; }
+    img[style*="max-height"] { max-width:100% !important; }
+  }
+
+</style>
+</helmet>
+
+<header style="display:flex;align-items:center;justify-content:space-between;gap:20px;padding:20px 0;flex-wrap:wrap;position:sticky;top:0;z-index:100;background:#f7f6f2;border-bottom:1px solid #e6e2d4;width:100%;">
+  <div style="max-width:1440px;margin:0 auto;width:100%;box-sizing:border-box;padding:0 32px;display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;">
+    <div style="display:flex;align-items:center;gap:10px;white-space:nowrap;">
+      <img src="images/logo-vemtoven.png" alt="Vem to Ven.cz" style="height:46px;width:auto;display:block;flex-shrink:0;" />
+    </div>
+    <nav style="display:flex;align-items:center;gap:clamp(14px,2vw,32px);font-size:14px;font-weight:500;white-space:nowrap;">
+      <a href="vybaveni.html" style="color:#2f3323;text-decoration:none;">Vybavení k zapůjčení</a>
+      <a href="o-nas.html" style="color:#2f3323;text-decoration:none;">O nás</a>
+      <a href="kontakt.html" style="color:#2f3323;text-decoration:none;">Kontakt</a>
+    </nav>
+    <div style="display:flex;align-items:center;gap:16px;white-space:nowrap;">
+      <a href="vybaveni.html" style="background:#4c5c37;color:#f3efe4;padding:12px 22px;border-radius:100px;font-size:14px;font-weight:600;text-decoration:none;display:flex;align-items:center;gap:6px;white-space:nowrap;">Prohlédnout vybavení →</a>
+    </div>
+  </div>
+  </header>
+
+<div style="max-width:1440px;margin:0 auto;background:#f7f6f2;">
+
+  <!-- HERO -->
+  <section style="padding:80px 32px 200px;">
+    <div style="display:grid;grid-template-columns:minmax(0,0.85fr) minmax(0,1.15fr);gap:clamp(28px,4vw,60px);align-items:center;">
+      <div style="min-width:0;">
+        <div style="display:flex;align-items:center;gap:14px;margin-bottom:26px;">
+          <div style="width:44px;height:1px;background:#dcd6c2;"></div>
+          <span style="font-size:12px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:#c07a2c;">Půjčovna Frýdek-Místek</span>
+        </div>
+        <h1 style="font-family:'Fraunces',serif;font-weight:700;font-size:clamp(46px,5.4vw,76px);line-height:1.02;margin:0 0 8px;color:#243318;">Vem to ven.</h1>
+        <div style="font-family:'Fraunces',serif;font-style:italic;font-weight:500;font-size:clamp(30px,3.4vw,48px);color:#7a9a4a;line-height:1.14;margin:0 0 30px;">Půjčovna vybavení<br/>na výlet, víkend<br/>i dovolenou.</div>
+        <p style="font-size:18px;line-height:1.65;color:#5b5f4f;max-width:520px;margin:0 0 36px;">Půjčte si střešní stan, nosič kol Thule, paddleboard nebo další kempingové a sportovní vybavení ve Frýdku-Místku. Vše zařídíte jednoduše a bez starostí.</p>
+        <div style="display:flex;gap:14px;flex-wrap:wrap;">
+          <a href="vybaveni.html" style="background:#4c5c37;color:#f3efe4;padding:18px 32px;border-radius:100px;font-size:16px;font-weight:600;text-decoration:none;">Prohlédnout vybavení →</a>
+          <a href="kontakt.html" style="background:transparent;color:#2f3323;border:1px solid #d8d0b8;padding:18px 32px;border-radius:100px;font-size:16px;font-weight:600;text-decoration:none;">Napsat poptávku</a>
+        </div>
+      </div>
+
+      <div style="position:relative;min-width:0;padding-bottom:60px;">
+        <img src="images/hero-stan.png" alt="Auto se střešním stanem u jezera v horách" style="width:100%;aspect-ratio:16/11;height:auto;object-fit:cover;border-radius:24px;display:block;box-shadow:0 18px 44px rgba(60,55,40,0.16);" />
+        <div style="position:absolute;bottom:0;left:-28px;background:#fff;border-radius:22px;padding:30px 34px;max-width:360px;box-shadow:0 18px 44px rgba(60,55,40,0.18);">
+          <div style="font-size:11px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:#c07a2c;margin-bottom:12px;">Naše motto</div>
+          <div style="font-family:'Fraunces',serif;font-size:clamp(22px,2.4vw,30px);font-weight:700;line-height:1.25;color:#243318;">Méně pořizování.<br/><span style="font-style:italic;color:#7a9a4a;">Více výletů.</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4 PROCESS CARDS -->
+  <section style="padding:0 64px 96px;text-align:center;">
+    <div style="display:flex;align-items:center;justify-content:center;gap:14px;">
+      <div style="width:44px;height:1px;background:#dcd6c2;"></div>
+      <span style="font-size:12px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:#c07a2c;">Jednoduchý proces zapůjčení</span>
+      <div style="width:44px;height:1px;background:#dcd6c2;"></div>
+    </div>
+    <h2 style="font-family:'Fraunces',serif;font-weight:600;font-size:38px;margin:16px 0 8px;">Jak to u nás funguje?</h2>
+    <p style="color:#6b6f5e;font-size:15px;margin:0 0 44px;">Žádné složité e-shopy, nákupní košíky ani registrace. Vše domluvíte rychle a osobně po e-mailu nebo telefonu.</p>
+    <div style="display:grid;grid-template-columns:repeat(4,minmax(0,1fr));grid-template-rows:auto auto;gap:18px;text-align:center;">
+      <div style="background:#fff;border-radius:20px;padding:28px 22px;box-shadow:0 8px 22px rgba(76,92,55,0.07);">
+        <div style="width:52px;height:52px;border-radius:16px;background:#edefe4;display:flex;align-items:center;justify-content:center;margin:0 auto 18px;color:#7a9a4a;"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.5" y2="16.5"/></svg></div>
+        <h3 style="font-family:'Fraunces',serif;font-size:18px;margin:0 0 10px;color:#243318;"><span style="color:#c07a2c;">1.</span> Vyberte si vybavení</h3>
+        <p style="font-size:14px;color:#5e7a41;line-height:1.65;margin:0;">Prohlédněte si naši nabídku a vyberte si výbavu přesně na svůj výlet.</p>
+      </div>
+      <div style="background:#fff;border-radius:20px;padding:28px 22px;box-shadow:0 8px 22px rgba(76,92,55,0.07);">
+        <div style="width:52px;height:52px;border-radius:16px;background:#edefe4;display:flex;align-items:center;justify-content:center;margin:0 auto 18px;color:#7a9a4a;"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 6l9 7 9-7"/></svg></div>
+        <h3 style="font-family:'Fraunces',serif;font-size:18px;margin:0 0 10px;color:#243318;"><span style="color:#c07a2c;">2.</span> Napište nám termín</h3>
+        <p style="font-size:14px;color:#5e7a41;line-height:1.65;margin:0;">Poptávku nám pošlete na e-mail. Nemusíte nic platit předem, vše si nejdříve potvrdíme.</p>
+      </div>
+      <div style="background:#fff;border-radius:20px;padding:28px 22px;box-shadow:0 8px 22px rgba(76,92,55,0.07);">
+        <div style="width:52px;height:52px;border-radius:16px;background:#edefe4;display:flex;align-items:center;justify-content:center;margin:0 auto 18px;color:#7a9a4a;"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M12 21s7-6.5 7-12a7 7 0 10-14 0c0 5.5 7 12 7 12z"/><circle cx="12" cy="9" r="2.5"/></svg></div>
+        <h3 style="font-family:'Fraunces',serif;font-size:18px;margin:0 0 10px;color:#243318;"><span style="color:#c07a2c;">3.</span> Vyzvedněte</h3>
+        <p style="font-size:14px;color:#5e7a41;line-height:1.65;margin:0;">Vybavení vám osobně předáme, podepíšeme smlouvu a pomůžeme i s montáží na auto.</p>
+      </div>
+      <div style="grid-column:4;grid-row:1 / span 2;background:#fbf4e6;border-radius:20px;border:1.5px solid #ecd9b4;padding:32px 28px;text-align:left;display:flex;flex-direction:column;gap:16px;box-shadow:0 8px 22px rgba(76,92,55,0.07);">
+        <div style="width:44px;height:44px;border-radius:14px;background:#f6e6c8;display:flex;align-items:center;justify-content:center;flex-shrink:0;color:#c07a2c;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v6"/><path d="M12 16.5h.01"/></svg></div>
+        <div style="font-family:'Fraunces',serif;font-size:18px;font-weight:700;color:#5c4a2c;line-height:1.35;">Komu vybavení půjčujeme</div>
+        <p style="font-size:14px;line-height:1.7;color:#6b573a;margin:0;text-wrap:pretty;">Chceme, aby se k nám vybavení vracelo ve stejně dobrém stavu, v jakém od nás odjíždí. Proto si také vybíráme, komu ho půjčujeme.</p>
+        <p style="font-size:14px;line-height:1.7;color:#6b573a;margin:0;text-wrap:pretty;"><strong style="color:#5c4a2c;">Nejsme půjčovna na festivaly, večírky nebo jednorázové akce</strong>, kde vybavení dostane pořádně zabrat. Chceme ho půjčit lidem, kteří si ho vezmou ven a budou z něj mít radost.</p>
+      </div>
+      <div style="background:#fff;border-radius:20px;padding:28px 22px;box-shadow:0 8px 22px rgba(76,92,55,0.07);">
+        <div style="width:52px;height:52px;border-radius:16px;background:#edefe4;display:flex;align-items:center;justify-content:center;margin:0 auto 18px;color:#7a9a4a;"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v3"/><path d="M12 18v3"/><path d="M4.2 4.2l2.1 2.1"/><path d="M17.7 17.7l2.1 2.1"/><path d="M4.2 19.8l2.1-2.1"/><path d="M17.7 6.3l2.1-2.1"/><path d="M3 12h3"/><path d="M18 12h3"/><circle cx="12" cy="12" r="3.2"/></svg></div>
+        <h3 style="font-family:'Fraunces',serif;font-size:18px;margin:0 0 10px;color:#243318;"><span style="color:#c07a2c;">4.</span> Užívejte</h3>
+        <p style="font-size:14px;color:#5e7a41;line-height:1.65;margin:0;">Vyrazte do Beskyd, k moři nebo třeba na cestu kolem světa a podělte se s námi o vaše zážitky.</p>
+      </div>
+      <div style="background:#fff;border-radius:20px;padding:28px 22px;box-shadow:0 8px 22px rgba(76,92,55,0.07);">
+        <div style="width:52px;height:52px;border-radius:16px;background:#edefe4;display:flex;align-items:center;justify-content:center;margin:0 auto 18px;color:#7a9a4a;"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M20 12a8 8 0 11-2.7-6"/><path d="M13.5 6.5l3.8-.5.5 3.8"/><path d="M12 8v4l3 2"/></svg></div>
+        <h3 style="font-family:'Fraunces',serif;font-size:18px;margin:0 0 10px;color:#243318;"><span style="color:#c07a2c;">5.</span> Vraťte vybavení</h3>
+        <p style="font-size:14px;color:#5e7a41;line-height:1.65;margin:0;">Po návratu z dobrodružství nám zapůjčené vybavení po předchozí domluvě vrátíte.</p>
+      </div>
+      <div style="background:#fff;border-radius:20px;padding:28px 22px;box-shadow:0 8px 22px rgba(76,92,55,0.07);">
+        <div style="width:52px;height:52px;border-radius:16px;background:#edefe4;display:flex;align-items:center;justify-content:center;margin:0 auto 18px;color:#7a9a4a;"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round"><path d="M12 3.5l2.6 5.6 6.1.8-4.4 4.2 1.1 6.1L12 17.1 6.6 20.2l1.1-6.1L3.3 9.9l6.1-.8z"/></svg></div>
+        <h3 style="font-family:'Fraunces',serif;font-size:18px;margin:0 0 10px;color:#243318;"><span style="color:#c07a2c;">6.</span> Recenze</h3>
+        <p style="font-size:14px;color:#5e7a41;line-height:1.65;margin:0;">Podělte se o své zážitky s kamarády nebo nás označte na Instagramu. Moc nám to pomůže.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CATALOG -->
+  <section style="padding:110px 64px 80px;">
+    <div style="text-align:center;margin-bottom:36px;">
+      <div style="display:flex;align-items:center;justify-content:center;gap:14px;">
+      <div style="width:44px;height:1px;background:#dcd6c2;"></div>
+      <span style="font-size:12px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:#c07a2c;">TOP vybavení</span>
+      <div style="width:44px;height:1px;background:#dcd6c2;"></div>
+    </div>
+      <h2 style="font-family:'Fraunces',serif;font-weight:600;font-size:38px;margin:16px 0 8px;">Nejčastěji půjčované vybavení</h2>
+      <p style="color:#6b6f5e;font-size:15px;margin:0;">Vyberte si výbavu na víkend, dovolenou nebo expedici do hor.</p>
+    </div>
+
+    <sc-if value="{{ loading }}" hint-placeholder-val="{{ false }}">
+      <div style="text-align:center;color:#8a8d7a;font-size:14px;padding:40px 0;">Načítám nabídku…</div>
+    </sc-if>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:26px;">
+      <sc-for list="{{ visibleProducts }}" as="p" hint-placeholder-count="6">
+        <div style="background:#fff;border-radius:18px;overflow:hidden;height:100%;display:flex;flex-direction:column;transition:transform .25s ease,box-shadow .25s ease;box-shadow:0 8px 22px rgba(76,92,55,0.07);" style-hover="transform:translateY(-6px);box-shadow:0 18px 40px rgba(60,55,40,0.16);">
+          <div style="position:relative;height:250px;flex-shrink:0;">
+            <sc-if value="{{ p.hasPhoto }}" hint-placeholder-val="{{ false }}">
+              <div style="width:100%;height:100%;background-image:{{ p.imgCss }};background-size:cover;background-position:center;"></div>
+            </sc-if>
+            <sc-if value="{{ p.noPhoto }}" hint-placeholder-val="{{ true }}">
+              <img src="images/placeholder-foto.png" alt="{{ p.name }}" style="width:100%;height:100%;object-fit:cover;display:block;" />
+            </sc-if>
+            <span style="position:absolute;top:12px;left:12px;background:#fff;border-radius:100px;padding:5px 12px;font-size:12px;font-weight:600;z-index:2;">{{ p.category }}</span>
+          </div>
+          <div style="padding:20px 22px 24px;flex:1;display:flex;flex-direction:column;">
+            <div style="font-size:12px;font-weight:700;letter-spacing:0.05em;color:#8a8d7a;text-transform:uppercase;margin-bottom:8px;">{{ p.specific }}</div>
+            <h3 style="font-family:'Fraunces',serif;font-size:18px;margin:0 0 16px;line-height:1.35;min-height:49px;">{{ p.name }}</h3>
+            <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:auto;flex-wrap:wrap;">
+              <div style="font-size:13px;color:#8a8d7a;white-space:nowrap;flex-shrink:0;">Cena za den<br/><span style="font-family:'Fraunces',serif;font-size:24px;font-weight:600;color:#243318;">{{ p.price }}</span></div>
+              <a href="{{ p.href }}" style="background:#4c5c37;color:#f3efe4;border:none;padding:12px 20px;border-radius:100px;font-size:14px;font-weight:600;cursor:pointer;white-space:nowrap;text-decoration:none;display:inline-block;">Zobrazit více →</a>
+            </div>
+          </div>
+        </div>
+      </sc-for>
+    </div>
+    <div style="text-align:center;margin-top:48px;">
+      <a href="vybaveni.html" style="display:inline-flex;align-items:center;gap:8px;background:#4c5c37;color:#f3efe4;padding:16px 30px;border-radius:100px;font-size:15px;font-weight:600;text-decoration:none;">Zobrazit všechno vybavení<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+    </div>
+  </section>
+
+  </div>
+
+  <!-- WHY US BAND -->
+  <div style="background:transparent;width:100%;">
+  <div style="max-width:1440px;margin:0 auto;padding:0 64px;">
+
+  <section style="padding:100px 0 50px;">
+    <div style="text-align:center;margin-bottom:48px;">
+      <div style="display:flex;align-items:center;justify-content:center;gap:14px;">
+      <div style="width:44px;height:1px;background:#dcd6c2;"></div>
+      <span style="font-size:12px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:#c07a2c;">Proč VemToVen</span>
+      <div style="width:44px;height:1px;background:#dcd6c2;"></div>
+    </div>
+      <h2 style="font-family:'Fraunces',serif;font-weight:600;font-size:38px;margin:16px 0 8px;color:#243318;">Půjčit se vyplatí víc než kupovat</h2>
+      <p style="color:#6b7a5c;font-size:15px;margin:0;">Méně pořizování, méně starostí – a o to víc času venku.</p>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px;">
+    <div style="background:#fff;border-radius:20px;padding:28px 22px;text-align:center;box-shadow:0 8px 22px rgba(76,92,55,0.07);">
+      <div style="width:64px;height:64px;border-radius:20px;background:#edefe4;display:flex;align-items:center;justify-content:center;margin:0 auto 26px;color:#7a9a4a;"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M12 3c-4 3-7 6-7 10a7 7 0 0014 0c0-4-3-7-7-10z"/></svg></div>
+      <h3 style="font-family:'Fraunces',serif;font-size:18px;margin:0 0 10px;color:#243318;">Nepotřebuješ to vlastnit</h3>
+      <p style="font-size:14px;color:#5e7a41;line-height:1.65;margin:0;">Půjč si to správné vybavení za zlomek ceny. Ušetříš peníze, starosti i místo v garáži.</p>
+    </div>
+    <div style="background:#fff;border-radius:20px;padding:28px 22px;text-align:center;box-shadow:0 8px 22px rgba(76,92,55,0.07);">
+      <div style="width:64px;height:64px;border-radius:20px;background:#edefe4;display:flex;align-items:center;justify-content:center;margin:0 auto 26px;color:#7a9a4a;"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><line x1="5" y1="4" x2="5" y2="20"/><circle cx="5" cy="9" r="2.2"/><line x1="12" y1="4" x2="12" y2="20"/><circle cx="12" cy="15" r="2.2"/><line x1="19" y1="4" x2="19" y2="20"/><circle cx="19" cy="7" r="2.2"/></svg></div>
+      <h3 style="font-family:'Fraunces',serif;font-size:18px;margin:0 0 10px;color:#243318;">Půjčíš si přesně to, co potřebuješ</h3>
+      <p style="font-size:14px;color:#5e7a41;line-height:1.65;margin:0;">Od střešního stanu na víkend po paddleboard na týdenní pobyt v Chorvatsku.</p>
+    </div>
+    <div style="background:#fff;border-radius:20px;padding:28px 22px;text-align:center;box-shadow:0 8px 22px rgba(76,92,55,0.07);">
+      <div style="width:64px;height:64px;border-radius:20px;background:#edefe4;display:flex;align-items:center;justify-content:center;margin:0 auto 26px;color:#7a9a4a;"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M12 21s7-6.5 7-12a7 7 0 10-14 0c0 5.5 7 12 7 12z"/><circle cx="12" cy="9" r="2.5"/></svg></div>
+      <h3 style="font-family:'Fraunces',serif;font-size:18px;margin:0 0 10px;color:#243318;">Jsme kousek od tebe</h3>
+      <p style="font-size:14px;color:#5e7a41;line-height:1.65;margin:0;">Osobní přístup a rychlé předání ve Frýdku-Místku a okolí.</p>
+    </div>
+    <div style="background:#fff;border-radius:20px;padding:28px 22px;text-align:center;box-shadow:0 8px 22px rgba(76,92,55,0.07);">
+      <div style="width:64px;height:64px;border-radius:20px;background:#edefe4;display:flex;align-items:center;justify-content:center;margin:0 auto 26px;color:#7a9a4a;"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13l4 4L19 7"/><path d="M3 18.5h4"/></svg></div>
+      <h3 style="font-family:'Fraunces',serif;font-size:18px;margin:0 0 10px;color:#243318;">Vybavení sami používáme</h3>
+      <p style="font-size:14px;color:#5e7a41;line-height:1.65;margin:0;">Půjčujeme jen to, v čem jsme sami spali a co jsme vyzkoušeli. Vždy čisté a připravené.</p>
+    </div>
+    </div>
+
+  </section>
+
+  <!-- WHY RENT -->
+  <section style="padding:0 0 110px;">
+    <div style="background:#fff;border-radius:22px;padding:48px;display:grid;grid-template-columns:minmax(280px,1fr) minmax(280px,460px);gap:48px;align-items:center;">
+      <div style="min-width:0;">
+        <h2 style="font-family:'Fraunces',serif;font-weight:600;font-size:30px;margin:0 0 16px;">Proč si vybavení raději půjčit?</h2>
+        <p style="font-size:15px;color:#6b6f5e;line-height:1.7;margin:0 0 20px;">Kvalitní střešní stan stojí přes 40 000 Kč a nosič kol i box na tažné 20 000 Kč. Pokud vyrazíte na výlet jen párkrát do roka, nákup se nevyplatí a výbava jen zabírá místo.</p>
+        <div style="display:flex;flex-direction:column;gap:12px;margin-bottom:28px;font-size:14px;">
+          <div style="display:flex;align-items:center;gap:9px;"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#4c5c37" stroke-width="2.4" style="flex-shrink:0;"><path d="M5 13l4 4L19 7"/></svg>Ušetříte desítky tisíc korun za nákup</div>
+          <div style="display:flex;align-items:center;gap:9px;"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#4c5c37" stroke-width="2.4" style="flex-shrink:0;"><path d="M5 13l4 4L19 7"/></svg>Žádné starosti se skladováním a údržbou</div>
+          <div style="display:flex;align-items:center;gap:9px;"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#4c5c37" stroke-width="2.4" style="flex-shrink:0;"><path d="M5 13l4 4L19 7"/></svg>Vybavení sami používáme a proto víme, že z něj budete mít radost i vy</div>
+        </div>
+        <div style="display:flex;gap:14px;">
+          <a href="vybaveni.html" style="background:#4c5c37;color:#f3efe4;padding:14px 24px;border-radius:100px;font-size:14px;font-weight:600;text-decoration:none;">Vybrat si vybavení</a>
+          <a href="mailto:info@vemtoven.cz" style="background:transparent;color:#2f3323;border:1px solid #d8d0b8;padding:14px 24px;border-radius:100px;font-size:14px;font-weight:600;text-decoration:none;">Napsat dotaz na e-mail</a>
+        </div>
+      </div>
+      <img src="images/placeholder-foto.png" alt="Fotografie bude doplněna" style="width:100%;height:320px;object-fit:cover;display:block;border-radius:inherit;" />
+    </div>
+  </section>
+
+  </div>
+  </div>
+
+  <div style="max-width:1440px;margin:0 auto;background:#f7f6f2;">
+
+  <!-- BRANDS -->
+  <section style="padding:110px 64px 110px;text-align:center;">
+    <div style="display:flex;align-items:center;justify-content:center;gap:14px;">
+      <div style="width:44px;height:1px;background:#dcd6c2;"></div>
+      <span style="font-size:12px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:#c07a2c;">Pouze kvalitní vybavení</span>
+      <div style="width:44px;height:1px;background:#dcd6c2;"></div>
+    </div>
+    <h2 style="font-family:'Fraunces',serif;font-weight:600;font-size:38px;margin:16px 0 8px;color:#243318;">Značky, kterým věříme</h2>
+    <p style="color:#6b7a5c;font-size:15px;margin:0 0 44px;">Půjčujeme jen prověřené vybavení od výrobců, které používáme sami.</p>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:18px;">
+      <div class="brand-card" style="background:#fff;border-radius:20px;padding:22px 18px;box-shadow:0 8px 22px rgba(76,92,55,0.07);display:flex;align-items:center;justify-content:center;overflow:hidden;">
+        <img src="images/logo-thule.png" alt="Thule" style="max-width:100%;max-height:68px;object-fit:contain;display:block;" />
+      </div>
+      <div class="brand-card" style="background:#fff;border-radius:20px;padding:22px 18px;box-shadow:0 8px 22px rgba(76,92,55,0.07);display:flex;align-items:center;justify-content:center;overflow:hidden;">
+        <img src="images/logo-sovnaran.png" alt="Logo" style="max-width:100%;max-height:68px;width:auto;object-fit:contain;display:block;" />
+      </div>
+      <div class="brand-card" style="background:#fff;border-radius:20px;padding:22px 18px;box-shadow:0 8px 22px rgba(76,92,55,0.07);display:flex;align-items:center;justify-content:center;overflow:hidden;">
+        <img src="images/logo-gp.png" alt="GP" style="max-width:100%;max-height:68px;object-fit:contain;display:block;" />
+      </div>
+      <div class="brand-card" style="background:#fff;border-radius:20px;padding:22px 18px;box-shadow:0 8px 22px rgba(76,92,55,0.07);display:flex;align-items:center;justify-content:center;overflow:hidden;">
+        <img src="images/logo-decathlon.png" alt="Decathlon" style="max-width:100%;max-height:52px;object-fit:contain;display:block;" />
+      </div>
+      <div class="brand-card" style="background:#fff;border-radius:20px;padding:22px 18px;box-shadow:0 8px 22px rgba(76,92,55,0.07);display:flex;align-items:center;justify-content:center;overflow:hidden;">
+        <img src="images/logo-campingaz.png" alt="Logo" style="max-width:100%;max-height:68px;width:auto;object-fit:contain;display:block;" />
+      </div>
+      <div class="brand-card" style="background:#fff;border-radius:20px;padding:22px 18px;box-shadow:0 8px 22px rgba(76,92,55,0.07);display:flex;align-items:center;justify-content:center;overflow:hidden;">
+        <img src="images/logo-aquamarina.png" alt="Aqua Marina" style="max-width:100%;max-height:68px;object-fit:contain;display:block;" />
+      </div>
+      <div class="brand-card" style="background:#fff;border-radius:20px;padding:22px 18px;box-shadow:0 8px 22px rgba(76,92,55,0.07);display:flex;align-items:center;justify-content:center;overflow:hidden;">
+        <img src="images/logo-jbl.png" alt="Logo" style="max-width:100%;max-height:68px;width:auto;object-fit:contain;display:block;" />
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section style="padding:110px 64px 110px;text-align:center;">
+    <div style="display:flex;align-items:center;justify-content:center;gap:14px;">
+      <div style="width:44px;height:1px;background:#dcd6c2;"></div>
+      <span style="font-size:12px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:#c07a2c;">Časté dotazy</span>
+      <div style="width:44px;height:1px;background:#dcd6c2;"></div>
+    </div>
+    <h2 style="font-family:'Fraunces',serif;font-weight:600;font-size:34px;margin:16px 0 8px;">Často kladené dotazy</h2>
+    <p style="color:#6b6f5e;font-size:15px;margin:0 0 32px;">Vše, co potřebujete vědět před poptávkou a vyzvednutím.</p>
+    <div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:26px;text-align:left;">
+      <sc-for list="{{ faqs }}" as="q" hint-placeholder-count="4">
+        <div style="background:#fff;border-radius:22px;padding:34px 36px;display:flex;gap:22px;align-items:flex-start;box-shadow:0 10px 28px rgba(76,92,55,0.07);height:100%;">
+          <div style="width:52px;height:52px;border-radius:16px;background:#eef1e6;display:flex;align-items:center;justify-content:center;flex-shrink:0;color:#7a9a4a;">{{ q.icon }}</div>
+          <div style="min-width:0;">
+            <h3 style="font-family:'Fraunces',serif;font-size:19px;font-weight:600;margin:0 0 12px;color:#243318;line-height:1.35;">{{ q.question }}</h3>
+            <p style="font-size:14.5px;color:#6b7a5c;line-height:1.75;margin:0;text-wrap:pretty;">{{ q.answer }}</p>
+          </div>
+        </div>
+      </sc-for>
+    </div>
+  </section>
+
+  </div>
+
+  <!-- FOOTER -->
+  <footer style="background:#333e28;color:#e4e2d3;padding:56px 0 28px;width:100%;">
+    <div style="max-width:1440px;margin:0 auto;padding:0 64px;box-sizing:border-box;">
+    <div style="display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:48px;margin-bottom:40px;">
+      <div>
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:16px;">
+          <img src="images/logo-vemtoven-light.png" alt="Vem to Ven.cz" style="height:42px;width:auto;display:block;flex-shrink:0;" />
+        </div>
+        <p style="font-size:13px;color:#b7b6a4;line-height:1.7;max-width:320px;margin:0 0 20px;">Půjčovna outdoorového vybavení ve Frýdku-Místku. Ušetříme vám místo v garáži i peněženku. Střešní stany, kempingové vybavení a nosiče kol na jednu poptávku.</p>
+        <a href="mailto:info@vemtoven.cz" style="background:transparent;color:#fff;border:1px solid #5b6650;padding:11px 20px;border-radius:100px;font-size:13px;font-weight:600;text-decoration:none;display:inline-flex;align-items:center;gap:8px;"><svg width="15" height="15" style="flex-shrink:0;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 6l9 7 9-7"/></svg>Napsat poptávku na info@vemtoven.cz</a>
+      </div>
+      <div>
+        <div style="font-size:12px;font-weight:700;letter-spacing:0.06em;color:#9aa08a;margin-bottom:16px;">NAVIGACE</div>
+        <div style="display:flex;flex-direction:column;gap:12px;font-size:14px;">
+        <a href="index.html" style="color:#e4e2d3;text-decoration:none;">Úvodní stránka</a>
+        <a href="vybaveni.html" style="color:#e4e2d3;text-decoration:none;">Vybavení k zapůjčení</a>
+        <a href="o-nas.html" style="color:#e4e2d3;text-decoration:none;">O nás</a>
+        <a href="kontakt.html" style="color:#e4e2d3;text-decoration:none;">Kontakt</a>
+      </div>
+      </div>
+      <div>
+        <div style="font-size:12px;font-weight:700;letter-spacing:0.06em;color:#9aa08a;margin-bottom:16px;">KONTAKT &amp; POPTÁVKY</div>
+        <div style="display:flex;flex-direction:column;gap:12px;font-size:14px;color:#e4e2d3;">
+          <div style="display:flex;align-items:flex-start;gap:9px;"><svg width="14" height="14" style="flex-shrink:0;margin-top:3px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 6l9 7 9-7"/></svg>info@vemtoven.cz</div>
+          <div style="display:flex;align-items:flex-start;gap:9px;"><svg width="14" height="14" style="flex-shrink:0;margin-top:3px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h4l2 5-2.5 1.5a12 12 0 006 6L15 14l5 2v4a2 2 0 01-2 2C9.5 22 2 14.5 2 6a2 2 0 012-2z"/></svg>+420 720 986 966</div>
+          <div style="display:flex;align-items:flex-start;gap:9px;"><svg width="14" height="14" style="flex-shrink:0;margin-top:3px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1.2" fill="currentColor" stroke="none"/></svg><a href="https://www.instagram.com/vemtoven.cz" style="color:#e4e2d3;text-decoration:none;">@vemtoven.cz</a></div>
+        <div style="display:flex;align-items:flex-start;gap:9px;"><svg width="14" height="14" style="flex-shrink:0;margin-top:3px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h-2.5A4.5 4.5 0 008 7.5V10H5.5v4H8v7h4v-7h3l.7-4H12V7.8c0-.7.4-1.1 1.1-1.1H15z"/></svg><a href="https://www.facebook.com/vemtoven.cz" style="color:#e4e2d3;text-decoration:none;">VemToVen.cz</a></div>
+          </div>
+      </div>
+    </div>
+    <div style="border-top:1px solid #4a5540;padding-top:22px;display:flex;justify-content:space-between;font-size:12px;color:#8f9280;flex-wrap:wrap;gap:10px;">
+      <span>© 2026 VemToVen.cz – Všechna práva vyhrazena. Méně pořizování. Více výletů.</span>
+      <div style="display:flex;gap:20px;">
+        <span>Obchodní podmínky</span>
+        <span>Půjčovní řád</span>
+        <span>Ochrana soukromí a GDPR</span>
+      </div>
+    </div>
+    </div>
+  </footer>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+
+class Component extends DCLogic {
+  state = {
+    products: null,
+  };
+
+  faqData = [
+    {question:'Jak funguje půjčení a kde si vybavení vyzvednu?', answer:'Vše je maximálně jednoduché: vyberete si vybavení na webu a pošlete nezávaznou poptávku s termínem na info@vemtoven.cz. My vám termín co nejdříve potvrdíme. Vyzvednutí probíhá osobně ve Frýdku-Místku nebo v blízkém okolí dle domluvy.'},
+    {question:'Jak je to s vratnou kaucí?', answer:'U dražšího vybavení (střešní stany, boxy) požadujeme vratnou kauci, která je uvedena v detailu produktu. Kauci vracíme v plné výši při vrácení nepoškozeného vybavení.'},
+    {question:'Musím platit předem kartou?', answer:'Ne, nic neplatíte předem kartou. Platba probíhá až při předání vybavení, a to buď hotově nebo okamžitým převodem na bankovní účet.'},
+    {question:'Pomůžete s montáží na moje auto?', answer:'Ano, při předání vám rádi ukážeme a v případě potřeby pomůžeme s montáží střešního stanu, boxu či nosiče kol na vaše konkrétní auto.'},
+  ];
+
+  componentDidMount() {
+    fetch('data/products.json')
+      .then(r => r.json())
+      .then(products => this.setState({products}))
+      .catch(e => console.error('[vemtoven] nepodařilo se načíst products.json', e));
+  }
+
+  renderVals() {
+    const svg = (...paths) => React.createElement('svg', {width:24,height:24,viewBox:'0 0 24 24',fill:'none',stroke:'currentColor',strokeWidth:1.9,strokeLinecap:'round',strokeLinejoin:'round'},
+      ...paths.map((d, i) => React.createElement('path', {key:i, d})));
+    const icons = [
+      svg('M12 21s7-6.5 7-12a7 7 0 10-14 0c0 5.5 7 12 7 12z','M12 11.5a2.5 2.5 0 100-5 2.5 2.5 0 000 5z'),
+      svg('M2 9h20l-2 11H4z','M8 9V6a4 4 0 018 0v3'),
+      svg('M2 7h20v10H2z','M6 12h4','M16 12h2'),
+      svg('M14.5 6.5a3.5 3.5 0 004.8 4.6l-8.6 8.6a2.4 2.4 0 01-3.4-3.4l8.6-8.6a3.5 3.5 0 00-1.4-1.2z','M16.5 3.5l4 4-2 2-4-4z'),
+    ];
+    const faqs = this.faqData.map((q, i) => ({...q, icon: icons[i % icons.length]}));
+
+    if (!this.state.products) {
+      return { loading: true, visibleProducts: [], faqs };
+    }
+
+    const visibleProducts = this.state.products
+      .filter(p => p.featured)
+      .map(p => ({...p, hasPhoto: !!p.imgSrc, noPhoto: !p.imgSrc, imgCss: p.imgSrc ? `url(${p.imgSrc})` : 'none'}));
+
+    return { loading: false, visibleProducts, faqs };
+  }
+}
+
+</script>
+</body>
+</html>
