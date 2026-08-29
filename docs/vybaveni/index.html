@@ -32,6 +32,7 @@
 <style>
   body { margin:0; background:#f7f6f2; font-family:'Inter',sans-serif; color:#2f3323; }
   .nav-toggle-btn{display:none;width:44px;height:44px;background:#edefe4;border:none;border-radius:14px;cursor:pointer;padding:0;flex-shrink:0;color:#7a9a4a;}
+  .cta-short{display:none;}
   .nav-toggle-btn .icon-close{display:none;}
   .nav-toggle-btn.is-active .icon-open{display:none;}
   .nav-toggle-btn.is-active .icon-close{display:block;}
@@ -79,7 +80,10 @@
     .product-card-title { font-size:13px !important; margin:0 0 6px !important; min-height:auto !important; line-height:1.25 !important; }
     .product-card-price { font-size:10px !important; }
     .product-card-price span { font-size:14px !important; }
+    .product-card-footer { flex-wrap:nowrap !important; }
     .product-card-cta { padding:7px 10px !important; font-size:11px !important; }
+    .cta-full { display:none; }
+    .cta-short { display:inline; }
   }
 
 </style>
@@ -144,9 +148,9 @@
         <div class="product-card-body" style="padding:20px 22px 24px;flex:1;display:flex;flex-direction:column;">
           <div class="product-card-specific" style="font-size:12px;font-weight:700;letter-spacing:0.05em;color:#8a8d7a;text-transform:uppercase;margin-bottom:8px;">{{ p.specific }}</div>
           <h3 class="product-card-title" style="font-family:'Fraunces',serif;font-size:20px;margin:0 0 14px;line-height:1.35;min-height:55px;">{{ p.name }}</h3>
-          <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:auto;flex-wrap:wrap;">
+          <div class="product-card-footer" style="display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:auto;flex-wrap:wrap;">
             <div class="product-card-price" style="font-size:13px;color:#8a8d7a;white-space:nowrap;flex-shrink:0;">Cena za den<br/><span style="font-family:'Fraunces',serif;font-size:24px;font-weight:600;color:#243318;">{{ p.price }}</span></div>
-            <a href="{{ p.href }}" class="product-card-cta" style="background:#4c5c37;color:#f3efe4;padding:12px 18px;border-radius:100px;font-size:14px;font-weight:600;white-space:nowrap;text-decoration:none;display:inline-block;">Zobrazit více →</a>
+            <a href="{{ p.href }}" class="product-card-cta" style="background:#4c5c37;color:#f3efe4;padding:12px 18px;border-radius:100px;font-size:14px;font-weight:600;white-space:nowrap;text-decoration:none;display:inline-block;"><span class="cta-full">Zobrazit více →</span><span class="cta-short">Více</span></a>
           </div>
         </div>
       </div>
