@@ -51,6 +51,8 @@
     [style*="grid-template-columns: repeat(4"], [style*="grid-template-columns: repeat(5"] { grid-template-columns:repeat(2,minmax(0,1fr)) !important; }
     [style*="grid-template-columns: repeat(3, 1fr)"], [style*="grid-template-columns: repeat(3, minmax"] { grid-template-columns:repeat(2,minmax(0,1fr)) !important; }
     [style*="grid-column: 4"], [style*="grid-area: 1 / 4"] { grid-area:auto !important; grid-column:auto !important; grid-row:auto !important; }
+    .steps-outer { flex-direction:column !important; }
+    .steps-special { width:100% !important; flex:none !important; }
   }
   @media (max-width: 860px) {
     header { position:static !important; }
@@ -85,6 +87,9 @@
     .product-card-cta { padding:7px 10px !important; font-size:11px !important; }
     .cta-full { display:none; }
     .cta-short { display:inline; }
+    .steps-row { display:flex !important; flex-wrap:nowrap !important; overflow-x:auto !important; -webkit-overflow-scrolling:touch; scrollbar-width:none; padding-bottom:2px; }
+    .steps-row::-webkit-scrollbar { display:none; }
+    .steps-row > div { flex:0 0 220px !important; width:220px !important; }
   }
 
 </style>
@@ -150,7 +155,8 @@
     </div>
     <h2 style="font-family:'Fraunces',serif;font-weight:600;font-size:38px;margin:16px 0 8px;">Jak to u nás funguje?</h2>
     <p style="color:#6b6f5e;font-size:15px;margin:0 0 44px;">Žádné složité e-shopy, nákupní košíky ani registrace. Vše domluvíte rychle a osobně po e-mailu nebo telefonu.</p>
-    <div style="display:grid;grid-template-columns:repeat(4,minmax(0,1fr));grid-template-rows:auto auto;gap:18px;text-align:center;">
+    <div class="steps-outer" style="display:flex;gap:18px;align-items:stretch;text-align:center;">
+      <div class="steps-row" style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));grid-template-rows:auto auto;gap:18px;flex:3;text-align:center;">
       <div style="background:#fff;border-radius:20px;padding:28px 22px;box-shadow:0 8px 22px rgba(76,92,55,0.07);">
         <div style="width:52px;height:52px;border-radius:16px;background:#edefe4;display:flex;align-items:center;justify-content:center;margin:0 auto 18px;color:#7a9a4a;"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.5" y2="16.5"/></svg></div>
         <h3 style="font-family:'Fraunces',serif;font-size:18px;margin:0 0 10px;color:#243318;"><span style="color:#c07a2c;">1.</span> Vyberte si vybavení</h3>
@@ -166,12 +172,6 @@
         <h3 style="font-family:'Fraunces',serif;font-size:18px;margin:0 0 10px;color:#243318;"><span style="color:#c07a2c;">3.</span> Vyzvedněte</h3>
         <p style="font-size:14px;color:#5e7a41;line-height:1.65;margin:0;">Vybavení vám osobně předáme, podepíšeme smlouvu a pomůžeme i s montáží na auto.</p>
       </div>
-      <div style="grid-column:4;grid-row:1 / span 2;background:#fbf4e6;border-radius:20px;border:1.5px solid #ecd9b4;padding:32px 28px;text-align:left;display:flex;flex-direction:column;gap:16px;box-shadow:0 8px 22px rgba(76,92,55,0.07);">
-        <div style="width:44px;height:44px;border-radius:14px;background:#f6e6c8;display:flex;align-items:center;justify-content:center;flex-shrink:0;color:#c07a2c;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v6"/><path d="M12 16.5h.01"/></svg></div>
-        <div style="font-family:'Fraunces',serif;font-size:18px;font-weight:700;color:#5c4a2c;line-height:1.35;">Komu vybavení půjčujeme</div>
-        <p style="font-size:14px;line-height:1.7;color:#6b573a;margin:0;text-wrap:pretty;">Chceme, aby se k nám vybavení vracelo ve stejně dobrém stavu, v jakém od nás odjíždí. Proto si také vybíráme, komu ho půjčujeme.</p>
-        <p style="font-size:14px;line-height:1.7;color:#6b573a;margin:0;text-wrap:pretty;"><strong style="color:#5c4a2c;">Nejsme půjčovna na festivaly, večírky nebo jednorázové akce</strong>, kde vybavení dostane pořádně zabrat. Chceme ho půjčit lidem, kteří si ho vezmou ven a budou z něj mít radost.</p>
-      </div>
       <div style="background:#fff;border-radius:20px;padding:28px 22px;box-shadow:0 8px 22px rgba(76,92,55,0.07);">
         <div style="width:52px;height:52px;border-radius:16px;background:#edefe4;display:flex;align-items:center;justify-content:center;margin:0 auto 18px;color:#7a9a4a;"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v3"/><path d="M12 18v3"/><path d="M4.2 4.2l2.1 2.1"/><path d="M17.7 17.7l2.1 2.1"/><path d="M4.2 19.8l2.1-2.1"/><path d="M17.7 6.3l2.1-2.1"/><path d="M3 12h3"/><path d="M18 12h3"/><circle cx="12" cy="12" r="3.2"/></svg></div>
         <h3 style="font-family:'Fraunces',serif;font-size:18px;margin:0 0 10px;color:#243318;"><span style="color:#c07a2c;">4.</span> Užívejte</h3>
@@ -186,6 +186,13 @@
         <div style="width:52px;height:52px;border-radius:16px;background:#edefe4;display:flex;align-items:center;justify-content:center;margin:0 auto 18px;color:#7a9a4a;"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round"><path d="M12 3.5l2.6 5.6 6.1.8-4.4 4.2 1.1 6.1L12 17.1 6.6 20.2l1.1-6.1L3.3 9.9l6.1-.8z"/></svg></div>
         <h3 style="font-family:'Fraunces',serif;font-size:18px;margin:0 0 10px;color:#243318;"><span style="color:#c07a2c;">6.</span> Recenze</h3>
         <p style="font-size:14px;color:#5e7a41;line-height:1.65;margin:0;">Podělte se o své zážitky s kamarády nebo nás označte na Instagramu. Moc nám to pomůže.</p>
+      </div>
+      </div>
+      <div class="steps-special" style="flex:1;background:#fbf4e6;border-radius:20px;border:1.5px solid #ecd9b4;padding:32px 28px;text-align:left;display:flex;flex-direction:column;gap:16px;box-shadow:0 8px 22px rgba(76,92,55,0.07);">
+        <div style="width:44px;height:44px;border-radius:14px;background:#f6e6c8;display:flex;align-items:center;justify-content:center;flex-shrink:0;color:#c07a2c;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v6"/><path d="M12 16.5h.01"/></svg></div>
+        <div style="font-family:'Fraunces',serif;font-size:18px;font-weight:700;color:#5c4a2c;line-height:1.35;">Komu vybavení půjčujeme</div>
+        <p style="font-size:14px;line-height:1.7;color:#6b573a;margin:0;text-wrap:pretty;">Chceme, aby se k nám vybavení vracelo ve stejně dobrém stavu, v jakém od nás odjíždí. Proto si také vybíráme, komu ho půjčujeme.</p>
+        <p style="font-size:14px;line-height:1.7;color:#6b573a;margin:0;text-wrap:pretty;"><strong style="color:#5c4a2c;">Nejsme půjčovna na festivaly, večírky nebo jednorázové akce</strong>, kde vybavení dostane pořádně zabrat. Chceme ho půjčit lidem, kteří si ho vezmou ven a budou z něj mít radost.</p>
       </div>
     </div>
   </section>
