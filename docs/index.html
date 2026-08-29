@@ -53,7 +53,7 @@
     [style*="grid-column: 4"], [style*="grid-area: 1 / 4"] { grid-area:auto !important; grid-column:auto !important; grid-row:auto !important; }
     .steps-outer { flex-direction:column !important; }
     .steps-special { width:100% !important; flex:none !important; }
-    .why-band { padding-left:24px !important; padding-right:24px !important; }
+    .why-band { padding-left:0 !important; padding-right:0 !important; }
   }
   @media (max-width: 860px) {
     header { position:static !important; }
@@ -67,6 +67,8 @@
     footer [style*="grid-template-columns: 1.4fr"] { grid-template-columns:minmax(0,1fr) !important; gap:32px !important; }
     [style*="grid-template-columns: repeat(2, 1fr)"], [style*="grid-template-columns: repeat(2, minmax"] { grid-template-columns:minmax(0,1fr) !important; }
     section { padding-top:56px !important; padding-bottom:56px !important; }
+    .why-us-section { padding-top:56px !important; padding-bottom:24px !important; }
+    .why-rent-section { padding-top:0 !important; padding-bottom:56px !important; }
   }
   @media (max-width: 640px) {
     header img { height:36px !important; }
@@ -92,11 +94,16 @@
     .steps-row { display:flex !important; flex-wrap:nowrap !important; overflow-x:auto !important; -webkit-overflow-scrolling:touch; scrollbar-width:none; padding-bottom:2px; }
     .steps-row::-webkit-scrollbar { display:none; }
     .steps-row > div { flex:0 0 220px !important; width:220px !important; }
-    .why-band { padding-left:20px !important; padding-right:20px !important; }
+    .why-band { padding-left:0 !important; padding-right:0 !important; }
     .why-row { display:flex !important; flex-wrap:nowrap !important; overflow-x:auto !important; -webkit-overflow-scrolling:touch; scrollbar-width:none; padding-bottom:2px; }
     .why-row::-webkit-scrollbar { display:none; }
     .why-row > div { flex:0 0 200px !important; width:200px !important; }
     .why-rent-photo { display:none !important; }
+    .why-rent-secondary-cta { display:none !important; }
+    .steps-special { display:none !important; }
+    .brands-grid { grid-template-columns:repeat(3,1fr) !important; gap:8px !important; }
+    .brand-card { padding:10px 6px !important; }
+    .brand-card img { max-height:32px !important; }
   }
 
 </style>
@@ -253,7 +260,7 @@
   <div style="background:transparent;width:100%;">
   <div class="why-band" style="max-width:1440px;margin:0 auto;padding:0 64px;">
 
-  <section style="padding:100px 0 50px;">
+  <section class="why-us-section" style="padding:100px 0 50px;">
     <div style="text-align:center;margin-bottom:48px;">
       <div style="display:flex;align-items:center;justify-content:center;gap:14px;">
       <div style="width:44px;height:1px;background:#dcd6c2;"></div>
@@ -289,7 +296,7 @@
   </section>
 
   <!-- WHY RENT -->
-  <section style="padding:0 0 110px;">
+  <section class="why-rent-section" style="padding:0 0 110px;">
     <div style="background:#fff;border-radius:22px;padding:48px;display:grid;grid-template-columns:minmax(280px,1fr) minmax(280px,460px);gap:48px;align-items:center;">
       <div style="min-width:0;">
         <h2 style="font-family:'Fraunces',serif;font-weight:600;font-size:30px;margin:0 0 16px;">Proč si vybavení raději půjčit?</h2>
@@ -301,7 +308,7 @@
         </div>
         <div style="display:flex;gap:14px;">
           <a href="/vybaveni/" style="background:#4c5c37;color:#f3efe4;padding:14px 24px;border-radius:100px;font-size:14px;font-weight:600;text-decoration:none;">Vybrat si vybavení</a>
-          <a href="mailto:info@vemtoven.cz" style="background:transparent;color:#2f3323;border:1px solid #d8d0b8;padding:14px 24px;border-radius:100px;font-size:14px;font-weight:600;text-decoration:none;">Napsat dotaz na e-mail</a>
+          <a href="mailto:info@vemtoven.cz" class="why-rent-secondary-cta" style="background:transparent;color:#2f3323;border:1px solid #d8d0b8;padding:14px 24px;border-radius:100px;font-size:14px;font-weight:600;text-decoration:none;">Napsat dotaz na e-mail</a>
         </div>
       </div>
       <img class="why-rent-photo" src="/images/placeholder-foto.png" alt="Fotografie bude doplněna" style="width:100%;height:320px;object-fit:cover;display:block;border-radius:inherit;" />
@@ -322,7 +329,7 @@
     </div>
     <h2 style="font-family:'Fraunces',serif;font-weight:600;font-size:38px;margin:16px 0 8px;color:#243318;">Značky, kterým věříme</h2>
     <p style="color:#6b7a5c;font-size:15px;margin:0 0 44px;">Půjčujeme jen prověřené vybavení od výrobců, které používáme sami.</p>
-    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:18px;">
+    <div class="brands-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:18px;">
       <div class="brand-card" style="background:#fff;border-radius:20px;padding:22px 18px;box-shadow:0 8px 22px rgba(76,92,55,0.07);display:flex;align-items:center;justify-content:center;overflow:hidden;">
         <img src="/images/logo-thule.png" alt="Thule" style="max-width:100%;max-height:68px;object-fit:contain;display:block;" />
       </div>
