@@ -142,57 +142,34 @@
     Zpět na přehled vybavení
   </a>
 
-  <sc-if value="{{ loading }}" hint-placeholder-val="{{ false }}">
-    <div style="text-align:center;color:#8a8d7a;font-size:14px;padding:80px 0;">Načítám produkt…</div>
-  </sc-if>
-  <sc-if value="{{ !loading }}" hint-placeholder-val="{{ true }}">
   <div style="display:grid;grid-template-columns:minmax(0,1fr) minmax(300px,460px);gap:40px;align-items:start;">
 
     <div style="min-width:0;">
       <div class="product-photo" style="position:relative;border-radius:20px;overflow:hidden;height:420px;margin-bottom:28px;">
-        <sc-if value="{{ p.hasPhoto }}" hint-placeholder-val="{{ false }}">
-          <div style="width:100%;height:100%;background-image:{{ p.imgCss }};background-size:cover;background-position:center;"></div>
-        </sc-if>
-        <sc-if value="{{ p.noPhoto }}" hint-placeholder-val="{{ true }}">
-          <img src="/images/placeholder-foto.png" alt="{{ p.name }}" style="width:100%;height:100%;object-fit:cover;display:block;" />
-        </sc-if>
-        <span style="position:absolute;top:16px;left:16px;border-radius:100px;padding:7px 16px;font-size:13px;font-weight:600;z-index:2;{{ p.badgeStyle }}">{{ p.badge }}</span>
+          <div style="width:100%;height:100%;background-image:url(/images/produkt-varic.jpg);background-size:cover;background-position:center;"></div>
+        <span style="position:absolute;top:16px;left:16px;background:#fbe9c6;color:#8a5c14;border-radius:100px;padding:7px 16px;font-size:13px;font-weight:600;z-index:2;">Lze objednat pouze se stanem</span>
       </div>
 
       <div style="display:flex;align-items:center;gap:10px;font-size:12px;font-weight:700;letter-spacing:0.05em;text-transform:uppercase;margin-bottom:14px;">
-        <span style="color:#4c5c37;">{{ p.category }}</span>
+        <span style="color:#4c5c37;">Stany a kemping</span>
         <span style="color:#c7c2a8;">●</span>
-        <span style="color:#8a8d7a;font-weight:600;text-transform:none;letter-spacing:0;">{{ p.specific }}</span>
+        <span style="color:#8a8d7a;font-weight:600;text-transform:none;letter-spacing:0;">Campingaz Twister Plus PZ</span>
       </div>
-      <h1 style="font-family:'Fraunces',serif;font-weight:600;font-size:42px;line-height:1.15;margin:0 0 20px;">{{ p.name }}</h1>
-      <p style="font-size:15px;line-height:1.75;color:#5b5f4f;margin:0 0 28px;max-width:640px;text-wrap:pretty;">{{ p.description }}</p>
+      <h1 style="font-family:'Fraunces',serif;font-weight:600;font-size:42px;line-height:1.15;margin:0 0 20px;">Kempingový vařič</h1>
+      <p style="font-size:15px;line-height:1.75;color:#5b5f4f;margin:0 0 28px;max-width:640px;text-wrap:pretty;">Výkonný jednoplotýnkový vařič Campingaz Twister Plus PZ s piezo zapalováním. Zvládne uvařit vodu i připravit celé jídlo pro rodinu.</p>
 
-      <sc-if value="{{ p.hasStats }}" hint-placeholder-val="{{ true }}">
         <div style="display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;margin-bottom:28px;">
-          <sc-for list="{{ p.stats }}" as="s" hint-placeholder-count="4">
+          <sc-for list="{{ stats }}" as="s" hint-placeholder-count="4">
             <div style="background:#fff;border-radius:14px;padding:20px 16px;text-align:center;">
               <div style="font-size:12px;color:#8a8d7a;margin-bottom:6px;">{{ s.label }}</div>
               <div style="font-size:14px;font-weight:700;">{{ s.value }}</div>
             </div>
           </sc-for>
         </div>
-      </sc-if>
-
-      <sc-if value="{{ p.hasIncluded }}" hint-placeholder-val="{{ true }}">
-        <h2 style="font-family:'Fraunces',serif;font-weight:600;font-size:24px;margin:0 0 18px;">Půjčujeme s tímto příslušenstvím</h2>
-        <div style="background:#fff;border-radius:16px;padding:24px;margin-bottom:32px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px 24px;">
-          <sc-for list="{{ p.included }}" as="item" hint-placeholder-count="4">
-            <div style="display:flex;align-items:center;gap:11px;font-size:14px;color:#3c4030;">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#4c5c37" stroke-width="2.4" style="flex-shrink:0;"><path d="M5 13l4 4L19 7"/></svg>
-              {{ item }}
-            </div>
-          </sc-for>
-        </div>
-      </sc-if>
 
       <h2 style="font-family:'Fraunces',serif;font-weight:600;font-size:24px;margin:0 0 18px;">Podrobné technické parametry</h2>
       <div style="background:#fff;border-radius:16px;overflow:hidden;margin-bottom:28px;">
-        <sc-for list="{{ p.specs }}" as="row" hint-placeholder-count="5">
+        <sc-for list="{{ specs }}" as="row" hint-placeholder-count="5">
           <div class="spec-row" style="display:flex;justify-content:space-between;gap:20px;padding:18px 24px;border-bottom:1px solid #efedE3;font-size:14px;">
             <span style="color:#6b6f5e;">{{ row.label }}</span>
             <span style="font-weight:700;text-align:right;">{{ row.value }}</span>
@@ -215,11 +192,11 @@
       <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:16px;margin-bottom:24px;">
         <div>
           <div style="font-size:12px;font-weight:700;letter-spacing:0.05em;color:#8a8d7a;text-transform:uppercase;margin-bottom:6px;">Cena zápůjčky</div>
-          <div style="font-family:'Fraunces',serif;font-size:38px;font-weight:600;line-height:1;">{{ p.price }} <span style="font-size:16px;font-weight:500;color:#8a8d7a;font-family:'Inter',sans-serif;">{{ p.priceUnit }}</span></div>
+          <div style="font-family:'Fraunces',serif;font-size:38px;font-weight:600;line-height:1;">40 Kč <span style="font-size:16px;font-weight:500;color:#8a8d7a;font-family:'Inter',sans-serif;">/ den</span></div>
         </div>
         <div style="display:flex;align-items:flex-start;gap:8px;background:#fbf4e6;border-radius:12px;padding:10px 13px;max-width:170px;flex-shrink:0;">
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#c07a2c" stroke-width="2" stroke-linecap="round" style="flex-shrink:0;margin-top:1px;"><circle cx="12" cy="12" r="9"/><path d="M12 7v6"/><path d="M12 16.5h.01"/></svg>
-          <div style="font-size:11.5px;color:#5c4a2c;line-height:1.5;">{{ minDaysText }}</div>
+          <div style="font-size:11.5px;color:#5c4a2c;line-height:1.5;">Minimální doba zapůjčení je <strong>3 dny</strong>.</div>
         </div>
       </div>
 
@@ -266,12 +243,6 @@
           <span style="font-weight:700;font-size:15px;">Orientační cena celkem:</span>
           <span style="font-family:'Fraunces',serif;font-size:26px;font-weight:600;white-space:nowrap;">{{ totalLabel }}</span>
         </div>
-        <sc-if value="{{ p.hasDeposit }}" hint-placeholder-val="{{ true }}">
-        <div style="display:flex;align-items:center;gap:9px;background:#fbf4e6;border:1.5px solid #ecd9b4;border-radius:10px;padding:11px 14px;font-size:13px;font-weight:600;color:#5c4a2c;">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#c07a2c" stroke-width="2" style="flex-shrink:0;"><circle cx="12" cy="12" r="9"/><path d="M9 12l2 2 4-4"/></svg>
-          Vratná kauce při předání: <strong>{{ p.deposit }}</strong>
-        </div>
-        </sc-if>
       </div>
 
       <div style="border-top:2px solid #eae4d2;margin:6px 0 26px;"></div>
@@ -309,19 +280,13 @@
     </div>
 
   </div>
-  </sc-if>
 
   <h2 style="font-family:'Fraunces',serif;font-weight:600;font-size:28px;margin:96px 0 24px;">Mohlo by se vám hodit</h2>
   <div class="related-row" style="display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px;">
     <sc-for list="{{ related }}" as="r" hint-placeholder-count="4">
       <a href="{{ r.href }}" style="background:#fff;border-radius:18px;overflow:hidden;text-decoration:none;color:inherit;display:flex;flex-direction:column;box-shadow:0 8px 22px rgba(76,92,55,0.07);">
         <div style="height:150px;flex-shrink:0;">
-          <sc-if value="{{ r.hasPhoto }}" hint-placeholder-val="{{ false }}">
-            <div style="width:100%;height:100%;background-image:{{ r.imgCss }};background-size:cover;background-position:center;"></div>
-          </sc-if>
-          <sc-if value="{{ r.noPhoto }}" hint-placeholder-val="{{ true }}">
-            <img src="/images/placeholder-foto.png" alt="{{ r.name }}" style="width:100%;height:100%;object-fit:cover;display:block;" />
-          </sc-if>
+          <div style="width:100%;height:100%;background-image:{{ r.imgCss }};background-size:cover;background-position:center;"></div>
         </div>
         <div style="padding:18px 20px 20px;flex:1;display:flex;flex-direction:column;">
           <div style="font-size:11px;font-weight:700;letter-spacing:0.05em;color:#8a8d7a;text-transform:uppercase;margin-bottom:6px;">{{ r.specific }}</div>
@@ -384,8 +349,22 @@ const EMAILJS_TEMPLATE_ID = 'template_13g8m86';
 class Component extends DCLogic {
   MONTHS = ['Leden','Únor','Březen','Duben','Květen','Červen','Červenec','Srpen','Září','Říjen','Listopad','Prosinec'];
 
+  RAW = {
+    name: 'Kempingový vařič', category: 'Stany a kemping', specific: 'Campingaz Twister Plus PZ',
+    dayPrice: 40, minDays: 3, deposit: null, imgSrc: '/images/produkt-varic.jpg',
+  };
+
+  RELATED = [
+    { name: 'Box na tažné zařízení', specific: 'GP Calypso', price: '290 Kč', href: '/box-na-tazne/', imgSrc: '/images/box-na-tazne-light.jpg' },
+    { name: 'Cyklonosič Thule pro 4 kola', specific: 'Thule VeloCompact 3 (926)', price: '290 Kč', href: '/cyklonosic-thule/', imgSrc: '/images/produkt-cyklonosic.jpg' },
+    { name: 'Střešní box Thule', specific: 'Thule Pacific 700 DS Aeroskin', price: '190 Kč', href: '/stresni-box-thule/', imgSrc: '/images/stresni-box-light.jpg' },
+    { name: 'Paddleboard', specific: "Aqua Marina Vapor 10'4\"", price: '190 Kč', href: '/paddleboard/', imgSrc: '/images/produkt-paddleboard.jpg' },
+  ];
+
   state = {
-    productsMap: null, month: null, from: null, to: null,
+    month: new Date(new Date().getFullYear(), new Date().getMonth(), 1),
+    from: new Date(new Date().getFullYear(), new Date().getMonth(), new Date().getDate()),
+    to: new Date(new Date().getFullYear(), new Date().getMonth(), new Date().getDate() + this.RAW.minDays - 1),
     form: { name: '', phone: '', email: '', note: '' },
     status: 'idle',
   };
@@ -402,7 +381,7 @@ class Component extends DCLogic {
       this.setState({ status: 'error' });
       return;
     }
-    const raw = this.state.productsMap[this.currentKey(this.state.productsMap)];
+    const raw = this.RAW;
     const { from, to } = this.state;
     const days = (from && to) ? Math.round((to - from) / 86400000) + 1 : 0;
     const dateRange = (from && to) ? `${this.fmt(from)} – ${this.fmt(to)}` : 'nevybráno';
@@ -428,73 +407,9 @@ class Component extends DCLogic {
     });
   };
 
-  currentKey(map) {
-    if (!map) return 'k2';
-    const q = new URLSearchParams(location.search).get('p');
-    if (q && map[q]) return q;
-    const slug = location.pathname.replace(/^\/|\/$/g, '');
-    const bySlug = Object.keys(map).find(k => map[k].slug === slug);
-    if (bySlug) return bySlug;
-    const hash = (location.hash || '').replace('#', '');
-    if (hash && map[hash]) return hash;
-    return 'k2';
-  }
-
-  updateSeoTags(p) {
-    const url = 'https://vemtoven.cz' + p.href;
-    const title = p.name + ' – VemToVen.cz';
-    const desc = (p.description || '').slice(0, 160);
-    document.title = title;
-    const set = (selector, attr, value) => {
-      const el = document.querySelector(selector);
-      if (el) el.setAttribute(attr, value);
-    };
-    set('link[rel="canonical"]', 'href', url);
-    set('meta[name="description"]', 'content', desc);
-    set('meta[property="og:url"]', 'content', url);
-    set('meta[property="og:title"]', 'content', title);
-    set('meta[property="og:description"]', 'content', desc);
-    set('meta[name="twitter:title"]', 'content', title);
-    set('meta[name="twitter:description"]', 'content', desc);
-    if (p.imgSrc) {
-      const imgUrl = 'https://vemtoven.cz' + p.imgSrc;
-      set('meta[property="og:image"]', 'content', imgUrl);
-      set('meta[name="twitter:image"]', 'content', imgUrl);
-    }
-  }
-
-  defaultRange() {
-    const now = new Date();
-    const start = new Date(now.getFullYear(), now.getMonth(), now.getDate());
-    return { from: start, to: this.minEnd(start, 3) };
-  }
-
   componentDidMount() {
     if (window.emailjs) window.emailjs.init({ publicKey: EMAILJS_PUBLIC_KEY });
-    fetch('/data/products.json')
-      .then(r => r.json())
-      .then(products => {
-        const map = {};
-        products.forEach(p => { if (p.id !== 'k1') map[p.id] = p; });
-        this._key = this.currentKey(map);
-        this.updateSeoTags(map[this._key]);
-        const now = new Date();
-        this.setState({ productsMap: map, month: new Date(now.getFullYear(), now.getMonth(), 1), ...this.defaultRange() });
-      })
-      .catch(e => console.error('[vemtoven] nepodařilo se načíst products.json', e));
-
-    this._onHash = () => {
-      if (!this.state.productsMap) return;
-      const key = this.currentKey(this.state.productsMap);
-      if (key === this._key) return;
-      this._key = key;
-      this.updateSeoTags(this.state.productsMap[key]);
-      const now = new Date();
-      this.setState({ month: new Date(now.getFullYear(), now.getMonth(), 1), ...this.defaultRange() });
-    };
-    window.addEventListener('hashchange', this._onHash);
   }
-  componentWillUnmount() { window.removeEventListener('hashchange', this._onHash); }
 
   fmt = (d) => d ? `${String(d.getDate()).padStart(2,'0')}. ${String(d.getMonth()+1).padStart(2,'0')}. ${d.getFullYear()}` : '—';
   same = (a, b) => a && b && a.toDateString() === b.toDateString();
@@ -509,29 +424,24 @@ class Component extends DCLogic {
 
   shiftMonth = (n) => this.setState(s => ({month: new Date(s.month.getFullYear(), s.month.getMonth() + n, 1)}));
 
+  STATS = [
+    { label: 'Výkon', value: '2 900 W' },
+    { label: 'Zapalování', value: 'piezo' },
+    { label: 'Kartuše', value: 'CV 470 / CV 300' },
+    { label: 'Hmotnost', value: '215 g' },
+  ];
+  SPECS = [
+    { label: 'Model', value: 'Campingaz Twister Plus PZ' },
+    { label: 'Výkon', value: '2 900 W' },
+    { label: 'Typ kartuše', value: 'CV 470 Plus / CV 300 Plus (ventilová) – kartuše není součástí' },
+    { label: 'Zapalování', value: 'Piezoelektrické' },
+    { label: 'Podmínka zápůjčky', value: 'Pouze společně se stanem' },
+  ];
+
   renderVals() {
-    if (!this.state.productsMap) {
-      return {
-        loading: true, p: {}, related: [],
-        minDaysText: '', weekdays: ['Po','Út','St','Čt','Pá','So','Ne'], monthLabel: '', calDays: [], calHint: '',
-        prevMonth: () => {}, nextMonth: () => {},
-        rangeLabel: '', dayCountLabel: '', priceLineLabel: '', subtotalLabel: '', totalLabel: '',
-      };
-    }
-    const key = this.currentKey(this.state.productsMap);
-    const raw = this.state.productsMap[key];
-    const minDays = raw.minDays || 3;
-    const p = {
-      ...raw,
-      hasPhoto: !!raw.imgSrc,
-      hasDeposit: !!raw.deposit,
-      noPhoto: !raw.imgSrc,
-      imgCss: raw.imgSrc ? `url(${raw.imgSrc})` : 'none',
-      hasStats: !!(raw.stats && raw.stats.length),
-      hasIncluded: !!(raw.included && raw.included.length),
-      badge: raw.tentOnly ? 'Lze objednat pouze se stanem' : raw.category,
-      badgeStyle: raw.tentOnly ? 'background:#fbe9c6;color:#8a5c14;' : 'background:#fff;color:#2f3323;',
-    };
+    const raw = this.RAW;
+    const minDays = raw.minDays;
+    const related = this.RELATED.map(r => ({ ...r, imgCss: `url(${r.imgSrc})` }));
 
     const {month, from, to} = this.state;
     const first = new Date(month.getFullYear(), month.getMonth(), 1);
@@ -562,16 +472,8 @@ class Component extends DCLogic {
     const discount = n >= 6 ? Math.round(subtotal * 0.1) : 0;
     const totalAfterDiscount = subtotal - discount;
 
-    const related = Object.keys(this.state.productsMap)
-      .filter(k => k !== key)
-      .slice(0, 4)
-      .map(k => {
-        const r = this.state.productsMap[k];
-        return {imgSrc:r.imgSrc, hasPhoto:!!r.imgSrc, noPhoto:!r.imgSrc, imgCss: r.imgSrc ? `url(${r.imgSrc})` : 'none', specific:r.specific, name:r.name, price:r.price, href:r.href};
-      });
-
     return {
-      loading: false, p, related,
+      related, stats: this.STATS, specs: this.SPECS,
       minDaysText: minDays === 1 ? 'Zapůjčení možné i na jediný den.' : `Minimální doba zapůjčení je ${minDays} dny.`,
       weekdays: ['Po','Út','St','Čt','Pá','So','Ne'],
       monthLabel: `${this.MONTHS[month.getMonth()]} ${month.getFullYear()}`,
