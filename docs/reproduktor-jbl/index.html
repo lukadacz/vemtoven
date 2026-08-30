@@ -254,6 +254,12 @@
           <span>{{ priceLineLabel }}</span>
           <span>{{ subtotalLabel }}</span>
         </div>
+        <sc-if value="{{ hasDiscount }}" hint-placeholder-val="{{ false }}">
+        <div style="display:flex;justify-content:space-between;font-size:13px;color:#4c5c37;font-weight:700;margin-bottom:10px;">
+          <span>Sleva 10 % (6 a více dní)</span>
+          <span>{{ discountLabel }}</span>
+        </div>
+        </sc-if>
         <div style="display:flex;justify-content:space-between;align-items:baseline;gap:12px;margin-bottom:10px;">
           <span style="font-weight:700;font-size:15px;">Orientační cena celkem:</span>
           <span style="font-family:'Fraunces',serif;font-size:26px;font-weight:600;white-space:nowrap;">{{ totalLabel }}</span>
@@ -398,6 +404,8 @@ class Component extends DCLogic {
     const { from, to } = this.state;
     const days = (from && to) ? Math.round((to - from) / 86400000) + 1 : 0;
     const dateRange = (from && to) ? `${this.fmt(from)} – ${this.fmt(to)}` : 'nevybráno';
+    const subtotal = days * raw.dayPrice;
+    const discount = days >= 6 ? Math.round(subtotal * 0.1) : 0;
     this.setState({ status: 'sending' });
     window.emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, {
       from_name: this.state.form.name,
@@ -407,7 +415,7 @@ class Component extends DCLogic {
       product: raw.name,
       date_range: dateRange,
       days: days,
-      total_price: `${days * raw.dayPrice} Kč`,
+      total_price: `${subtotal - discount} Kč`,
       deposit: raw.deposit || 'bez kauce',
       page: 'Detail produktu',
     }).then(() => {
@@ -549,6 +557,8 @@ class Component extends DCLogic {
     const n = (from && to) ? Math.round((to - from) / 86400000) + 1 : 0;
     const dayWord = n === 1 ? 'den' : (n < 5 ? 'dny' : 'dnů');
     const subtotal = n * raw.dayPrice;
+    const discount = n >= 6 ? Math.round(subtotal * 0.1) : 0;
+    const totalAfterDiscount = subtotal - discount;
 
     const related = Object.keys(this.state.productsMap)
       .filter(k => k !== key)
@@ -571,7 +581,9 @@ class Component extends DCLogic {
       dayCountLabel: n ? `${n} ${dayWord}` : 'Vyberte konec',
       priceLineLabel: n ? `Půjčovné (${n}× ${raw.dayPrice} Kč)` : 'Půjčovné',
       subtotalLabel: `${subtotal} Kč`,
-      totalLabel: `${subtotal} Kč`,
+      hasDiscount: discount > 0,
+      discountLabel: `-${discount} Kč`,
+      totalLabel: `${totalAfterDiscount} Kč`,
       form: this.state.form,
       onFieldChange: this.onFieldChange,
       onSubmit: this.onSubmit,
