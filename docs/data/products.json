@@ -13,7 +13,7 @@
     "dayPrice": 490,
     "minDays": 3,
     "deposit": "5 000 Kč",
-    "imgSrc": "/images/stresni-stan-light.png"
+    "imgSrc": "/images/stresni-stan-light.jpg"
   },
   {
     "id": "k2",
@@ -29,7 +29,7 @@
     "dayPrice": 290,
     "minDays": 3,
     "deposit": "2 000 Kč",
-    "imgSrc": "/images/box-na-tazne-light.png",
+    "imgSrc": "/images/box-na-tazne-light.jpg",
     "description": "Prostorný zavazadlový box na tažné zařízení výrazně zvětší úložný prostor vašeho auta, aniž byste museli cokoliv vozit na střeše. Nakládá se pohodlně v úrovni kufru, nezvyšuje spotřebu jako střešní box a je ideální na rodinnou dovolenou i stěhování výbavy na kemp.",
     "stats": [
       {"label": "Objem", "value": "340 l"},
@@ -63,7 +63,7 @@
     "dayPrice": 290,
     "minDays": 3,
     "deposit": "2 000 Kč",
-    "imgSrc": "/images/produkt-cyklonosic.png",
+    "imgSrc": "/images/produkt-cyklonosic.jpg",
     "description": "Špičkový nosič kol Thule VeloCompact na tažné zařízení. Kola jsou uchycená rychle a bezpečně, nosič se sklápí pro přístup do kufru a díky kompaktní konstrukci se dobře skladuje. Se čtvrtou pozicí (adaptér) odvezete kola pro celou rodinu.",
     "stats": [
       {"label": "Kapacita", "value": "4 kola"},
@@ -94,7 +94,7 @@
     "dayPrice": 190,
     "minDays": 3,
     "deposit": "2 000 Kč",
-    "imgSrc": "/images/stresni-box-light.png",
+    "imgSrc": "/images/stresni-box-light.jpg",
     "description": "Aerodynamický střešní box Thule Pacific 700 s oboustranným otevíráním. Pojme lyže, kempingovou výbavu i objemná zavazadla a díky odolné konstrukci zvládne i dlouhou cestu k moři nebo do hor.",
     "stats": [
       {"label": "Objem", "value": "420 l"},
@@ -129,7 +129,7 @@
     "dayPrice": 190,
     "minDays": 3,
     "deposit": "2 000 Kč",
-    "imgSrc": "/images/produkt-paddleboard.png",
+    "imgSrc": "/images/produkt-paddleboard.jpg",
     "description": "Nafukovací paddleboard Aqua Marina Vapor je ideální volba pro klidnou vodu, jezera i řeky. Rychle se nafoukne, unese i dospělého s dítětem a po vypuštění se vejde do batohu, který svezete v kufru auta.",
     "stats": [
       {"label": "Délka", "value": "315 cm"},
@@ -160,7 +160,7 @@
     "dayPrice": 150,
     "minDays": 3,
     "deposit": "2 000 Kč",
-    "imgSrc": "/images/produkt-rodinny-stan.png",
+    "imgSrc": "/images/produkt-rodinny-stan.jpg",
     "description": "Rodinný stan Quechua Arpenaz 5.2 se dvěma spacími ložnicemi a prostornou obytnou částí. Technologie Fresh & Black výrazně snižuje teplotu uvnitř a zatemňuje ložnice, takže se ráno vyspíte i při plném slunci.",
     "stats": [
       {"label": "Kapacita", "value": "5 osob"},
@@ -191,7 +191,7 @@
     "dayPrice": 190,
     "minDays": 3,
     "deposit": "2 000 Kč",
-    "imgSrc": "/images/produkt-pristresek.png",
+    "imgSrc": "/images/produkt-pristresek.jpg",
     "description": "Velký kempingový přístřešek pro až 10 osob poskytne stín i úkryt před deštěm. Ideální jako společenský prostor u stanů — vejde se pod něj stůl se židlemi i kempingová kuchyně.",
     "stats": [
       {"label": "Kapacita", "value": "10 osob"},
@@ -223,7 +223,7 @@
     "dayPrice": 80,
     "minDays": 3,
     "deposit": null,
-    "imgSrc": "/images/produkt-kuchynka.png",
+    "imgSrc": "/images/produkt-kuchynka.jpg",
     "description": "Skládací kempingová kuchyňka vytvoří na kempu pořádnou pracovní plochu — odkládací police na nádobí, místo pro vařič i háčky na utěrky. Složí se do plochého vaku a postaví během minuty.",
     "stats": [
       {"label": "Police", "value": "3 úrovně"},
@@ -254,7 +254,7 @@
     "dayPrice": 40,
     "minDays": 3,
     "deposit": null,
-    "imgSrc": "/images/produkt-varic.png",
+    "imgSrc": "/images/produkt-varic.jpg",
     "description": "Výkonný jednoplotýnkový vařič Campingaz Twister Plus PZ s piezo zapalováním. Zvládne uvařit vodu i připravit celé jídlo pro rodinu.",
     "stats": [
       {"label": "Výkon", "value": "2 900 W"},
@@ -284,7 +284,7 @@
     "dayPrice": 490,
     "minDays": 1,
     "deposit": "2 000 Kč",
-    "imgSrc": "/images/produkt-reproduktor.png",
+    "imgSrc": "/images/produkt-reproduktor.jpg",
     "description": "Přenosný reproduktor JBL PartyBox Encore Essential s výkonem 100 W, světelnou show a výdrží až 6 hodin na baterii. Ideální na oslavu, svatbu, firemní akci i večer u ohně — a půjčit si ho můžete klidně jen na jeden den.",
     "stats": [
       {"label": "Výkon", "value": "100 W"},
@@ -316,7 +316,7 @@
     "dayPrice": 90,
     "minDays": 3,
     "deposit": null,
-    "imgSrc": "/images/produkt-stul-zidle.png",
+    "imgSrc": "/images/produkt-stul-zidle.jpg",
     "description": "Skládací kempingový stůl se čtyřmi židličkami — základ pohodlného posezení u stanu. Vše se složí do kompaktních vaků a snadno se vejde do kufru vedle ostatní výbavy.",
     "stats": [
       {"label": "Sada", "value": "stůl + 4 židle"},
@@ -348,7 +348,7 @@
     "dayPrice": 90,
     "minDays": 3,
     "deposit": null,
-    "imgSrc": "/images/produkt-chladnicka.png",
+    "imgSrc": "/images/produkt-chladnicka.jpg",
     "description": "Termoelektrická autochladnička Rohnson R-4024 udrží jídlo i pití příjemně vychlazené po celou dobu na kempu. Chladí tiše a bez chladiva, napájí se z autozásuvky i ze sítě a ovládá se jednoduše.",
     "stats": [
       {"label": "Objem", "value": "24 l"},
