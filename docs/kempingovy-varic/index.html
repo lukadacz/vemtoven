@@ -221,7 +221,7 @@
     <div class="booking-box" style="background:#fff;border-radius:20px;padding:32px;min-width:0;width:100%;max-width:460px;box-sizing:border-box;">
       <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:16px;margin-bottom:24px;">
         <div>
-          <div style="font-size:12px;font-weight:700;letter-spacing:0.05em;color:#8a8d7a;text-transform:uppercase;margin-bottom:6px;">Cena zápůjčky</div>
+          <div style="font-size:12px;font-weight:700;letter-spacing:0.05em;color:#8a8d7a;text-transform:uppercase;margin-bottom:6px;">Cena výpůjčky</div>
           <div style="font-family:'Fraunces',serif;font-size:38px;font-weight:600;line-height:1;">40 Kč <span style="font-size:16px;font-weight:500;color:#8a8d7a;font-family:'Inter',sans-serif;">/ den</span></div>
         </div>
         <div style="display:flex;align-items:flex-start;gap:8px;background:#fbf4e6;border-radius:12px;padding:10px 13px;max-width:170px;flex-shrink:0;">
@@ -427,7 +427,7 @@ class Component extends DCLogic {
       product: raw.name,
       date_range: dateRange,
       days: days,
-      total_price: `${subtotal - discount} Kč`,
+      total_price: this.fmtKc(subtotal - discount),
       deposit: raw.deposit || 'bez kauce',
       page: 'Detail produktu',
     }).then(() => {
@@ -443,6 +443,7 @@ class Component extends DCLogic {
   }
 
   fmt = (d) => d ? `${String(d.getDate()).padStart(2,'0')}. ${String(d.getMonth()+1).padStart(2,'0')}. ${d.getFullYear()}` : '—';
+  fmtKc = (n) => n.toLocaleString('cs-CZ') + ' Kč';
   same = (a, b) => a && b && a.toDateString() === b.toDateString();
   minEnd = (from, minDays) => new Date(from.getFullYear(), from.getMonth(), from.getDate() + minDays - 1);
 
@@ -466,7 +467,7 @@ class Component extends DCLogic {
     { label: 'Výkon', value: '2 900 W' },
     { label: 'Typ kartuše', value: 'CV 470 Plus / CV 300 Plus (ventilová) – kartuše není součástí' },
     { label: 'Zapalování', value: 'Piezoelektrické' },
-    { label: 'Podmínka zápůjčky', value: 'Pouze společně se stanem' },
+    { label: 'Podmínka výpůjčky', value: 'Pouze společně se stanem' },
   ];
 
   renderVals() {
@@ -509,18 +510,18 @@ class Component extends DCLogic {
       weekdays: ['Po','Út','St','Čt','Pá','So','Ne'],
       monthLabel: `${this.MONTHS[month.getMonth()]} ${month.getFullYear()}`,
       calDays,
-      calHint: to ? '' : `Vyberte datum konce zápůjčky – nejdříve ${this.fmt(this.minEnd(from, minDays))}.`,
+      calHint: to ? '' : `Vyberte datum konce výpůjčky – nejdříve ${this.fmt(this.minEnd(from, minDays))}.`,
       prevMonth: () => this.shiftMonth(-1),
       nextMonth: () => this.shiftMonth(1),
       rangeLabel: to ? `${this.fmt(from)} – ${this.fmt(to)}` : `${this.fmt(from)} – ?`,
       dayCountLabel: n ? `${n} ${dayWord}` : 'Vyberte konec',
       priceLineLabel: n ? `Půjčovné (${n}× ${raw.dayPrice} Kč)` : 'Půjčovné',
-      subtotalLabel: `${subtotal} Kč`,
-      discountLabel: discount > 0 ? `-${discount} Kč` : '0 Kč',
+      subtotalLabel: this.fmtKc(subtotal),
+      discountLabel: discount > 0 ? '-' + this.fmtKc(discount) : '0 Kč',
       discountRowStyle: discount > 0
         ? 'display:flex;justify-content:space-between;font-size:13px;color:#4c5c37;font-weight:700;margin-bottom:10px;'
         : 'display:flex;justify-content:space-between;font-size:13px;color:#8a8d7a;font-weight:400;margin-bottom:10px;',
-      totalLabel: `${totalAfterDiscount} Kč`,
+      totalLabel: this.fmtKc(totalAfterDiscount),
       form: this.state.form,
       onFieldChange: this.onFieldChange,
       onSubmit: this.onSubmit,

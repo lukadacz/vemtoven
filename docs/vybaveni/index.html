@@ -329,7 +329,7 @@ class Component extends DCLogic {
       .map(p0 => {
         let p = p0;
         const d = p.minDays || 3;
-        const label = 'Zápůjčka od ' + d + (d === 1 ? ' dne' : ' dnů');
+        const label = 'Výpůjčka od ' + d + (d === 1 ? ' dne' : ' dnů');
         p = {...p, hasPhoto: !!p.imgSrc, noPhoto: !p.imgSrc, imgCss: p.imgSrc ? `url(${p.imgSrc})` : 'none'};
         return p.tentOnly
           ? {...p, minDaysLabel:label, badge:'Lze objednat pouze se stanem', badgeStyle:'background:#fbe9c6;color:#8a5c14;', badgeIcon:warnIcon}

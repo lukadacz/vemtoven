@@ -291,7 +291,7 @@
     <div class="booking-box" style="background:#fff;border-radius:20px;padding:32px;min-width:0;width:100%;max-width:460px;box-sizing:border-box;">
       <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:16px;margin-bottom:24px;">
         <div>
-          <div style="font-size:12px;font-weight:700;letter-spacing:0.05em;color:#8a8d7a;text-transform:uppercase;margin-bottom:6px;">Cena zápůjčky</div>
+          <div style="font-size:12px;font-weight:700;letter-spacing:0.05em;color:#8a8d7a;text-transform:uppercase;margin-bottom:6px;">Cena výpůjčky</div>
           <div style="font-family:'Fraunces',serif;font-size:38px;font-weight:600;line-height:1;">490 Kč <span style="font-size:16px;font-weight:500;color:#8a8d7a;font-family:'Inter',sans-serif;">/ den</span></div>
         </div>
         <div style="display:flex;align-items:flex-start;gap:8px;background:#fbf4e6;border-radius:12px;padding:10px 13px;max-width:170px;flex-shrink:0;">
@@ -342,7 +342,7 @@
         </div>
         <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:10px;">
           <span style="font-weight:700;font-size:15px;">Orientační cena celkem:</span>
-          <span style="font-family:'Fraunces',serif;font-size:26px;font-weight:600;">{{ totalPrice }} Kč</span>
+          <span style="font-family:'Fraunces',serif;font-size:26px;font-weight:600;">{{ totalPrice }}</span>
         </div>
         <div style="display:flex;align-items:center;gap:9px;background:#fbf4e6;border:1.5px solid #ecd9b4;border-radius:10px;padding:11px 14px;font-size:13px;font-weight:600;color:#5c4a2c;">
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#c07a2c" stroke-width="2" style="flex-shrink:0;"><circle cx="12" cy="12" r="9"/><path d="M9 12l2 2 4-4"/></svg>
@@ -513,7 +513,7 @@ class Component extends DCLogic {
       product: 'Střešní stan pro 4 osoby',
       date_range: dateRange,
       days: days,
-      total_price: `${subtotal - discount} Kč`,
+      total_price: this.fmtKc(subtotal - discount),
       deposit: '5 000 Kč',
       page: 'Detail produktu',
     }).then(() => {
@@ -525,6 +525,7 @@ class Component extends DCLogic {
   };
 
   fmt = (d) => d ? `${String(d.getDate()).padStart(2,'0')}. ${String(d.getMonth()+1).padStart(2,'0')}. ${d.getFullYear()}` : '—';
+  fmtKc = (n) => n.toLocaleString('cs-CZ') + ' Kč';
   same = (a, b) => a && b && a.toDateString() === b.toDateString();
   days = () => {
     const {from, to} = this.state;
@@ -643,19 +644,19 @@ class Component extends DCLogic {
       included: this.included, specs: this.specs,
       calDays, weekdays: ['Po','Út','St','Čt','Pá','So','Ne'],
       monthLabel: `${this.MONTHS[month.getMonth()]} ${month.getFullYear()}`,
-      calHint: to ? '' : `Vyberte datum konce zápůjčky – nejdříve ${this.fmt(this.minEnd(from))}.`,
+      calHint: to ? '' : `Vyberte datum konce výpůjčky – nejdříve ${this.fmt(this.minEnd(from))}.`,
       prevMonth: () => this.shiftMonth(-1),
       nextMonth: () => this.shiftMonth(1),
       fromLabel: this.fmt(from), toLabel: this.fmt(to),
       rangeLabel: to ? `${this.fmt(from)} – ${this.fmt(to)}` : `${this.fmt(from)} – ?`,
       dayCountLabel: n ? `${n} ${dayWord}` : 'Vyberte konec',
       priceLineLabel: n ? `Půjčovné (${n}× ${this.DAY_PRICE} Kč)` : 'Půjčovné',
-      subtotalLabel: `${subtotal} Kč`,
-      discountLabel: discount > 0 ? `-${discount} Kč` : '0 Kč',
+      subtotalLabel: this.fmtKc(subtotal),
+      discountLabel: discount > 0 ? '-' + this.fmtKc(discount) : '0 Kč',
       discountRowStyle: discount > 0
         ? 'display:flex;justify-content:space-between;font-size:13px;color:#4c5c37;font-weight:700;margin-bottom:10px;'
         : 'display:flex;justify-content:space-between;font-size:13px;color:#8a8d7a;font-weight:400;margin-bottom:10px;',
-      totalPrice: totalAfterDiscount,
+      totalPrice: this.fmtKc(totalAfterDiscount),
       form: this.state.form,
       onFieldChange: this.onFieldChange,
       onSubmit: this.onSubmit,

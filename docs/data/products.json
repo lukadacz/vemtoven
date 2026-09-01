@@ -236,7 +236,7 @@
       {"label": "Značka", "value": "Quechua"},
       {"label": "Pracovní výška", "value": "cca 80 cm"},
       {"label": "Materiál", "value": "Hliníková konstrukce, odolná textilie"},
-      {"label": "Podmínka zápůjčky", "value": "Pouze společně se stanem"}
+      {"label": "Podmínka výpůjčky", "value": "Pouze společně se stanem"}
     ]
   },
   {
@@ -267,7 +267,7 @@
       {"label": "Výkon", "value": "2 900 W"},
       {"label": "Typ kartuše", "value": "CV 470 Plus / CV 300 Plus (ventilová) – kartuše není součástí"},
       {"label": "Zapalování", "value": "Piezoelektrické"},
-      {"label": "Podmínka zápůjčky", "value": "Pouze společně se stanem"}
+      {"label": "Podmínka výpůjčky", "value": "Pouze společně se stanem"}
     ]
   },
   {
@@ -329,7 +329,7 @@
       {"label": "Rozměry stolu", "value": "120 × 60 cm"},
       {"label": "Nosnost židle", "value": "110 kg"},
       {"label": "Materiál", "value": "Hliník a odolná textilie"},
-      {"label": "Podmínka zápůjčky", "value": "Pouze společně se stanem"}
+      {"label": "Podmínka výpůjčky", "value": "Pouze společně se stanem"}
     ]
   },
   {
@@ -362,7 +362,7 @@
       {"label": "Objem", "value": "24 litrů"},
       {"label": "Typ chlazení", "value": "Termoelektrické (Peltierův článek)"},
       {"label": "Chladicí výkon", "value": "až 20 °C pod okolní teplotu"},
-      {"label": "Podmínka zápůjčky", "value": "Pouze společně se stanem"}
+      {"label": "Podmínka výpůjčky", "value": "Pouze společně se stanem"}
     ]
   }
 ]
