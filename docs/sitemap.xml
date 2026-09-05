@@ -97,6 +97,18 @@
     <priority>0.4</priority>
   </url>
   <url>
+    <loc>https://vemtoven.cz/blog/</loc>
+    <lastmod>2026-09-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://vemtoven.cz/proc-jsme-si-vybrali-stresni-stan-sovnaran-skalmutt/</loc>
+    <lastmod>2026-09-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://vemtoven.cz/kontakt/</loc>
     <lastmod>2026-08-30</lastmod>
     <changefreq>monthly</changefreq>
