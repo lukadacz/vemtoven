@@ -115,8 +115,20 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>https://vemtoven.cz/jak-jsme-vyresili-bezpecne-prevazeni-kol/</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://vemtoven.cz/stresni-box-thule-jako-nas-zaklad-pro-vylety/</loc>
     <lastmod>2026-09-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://vemtoven.cz/jake-vybaveni-si-bereme-na-kempovani/</loc>
+    <lastmod>2026-08-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
